@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'ibm_plex_sanslight';
+    src: url('ibmplexsans-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+h1 {
+    font-family: 'ibm_plex_sanslight', sans-serif; 
+    text-transform: uppercase;
+
+}
+

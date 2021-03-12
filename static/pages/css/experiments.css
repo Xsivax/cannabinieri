@@ -1,0 +1,823 @@
+:root {
+    --space : 5px;
+}
+
+.page-wrapper {
+    display:grid;
+}
+
+.title{
+    margin-top: var(--space);
+}
+
+#about {
+margin-top: var(--space);
+background-color:white;
+}
+
+#about p {
+    color:black;
+}
+
+#oils-link {
+    margin-top: var(--space);
+}
+
+#oil {
+    width:100%;
+    height:100%;
+}
+
+#edibles-link {
+    background-color: white;
+    display: flex;
+    margin-top: var(--space);
+}
+
+#flower-link {
+    background-color:white;
+    display: flex;
+    margin-top: var(--space);
+}
+
+#flower {
+    width:100%;
+    height:100%;
+}
+
+@media screen and (min-width:1024px) {
+    
+    .page-wrapper {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto;
+    }
+
+    .title {
+        grid-column: 1/5;
+        grid-row:1;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 67vh;
+        padding-left: 7.5vh;
+    }
+
+    .title .short {
+        font-family:'IBM Plex Sans', sans-serif;
+        font-size:1.5em;
+        padding: 1.75em 1em;
+        color: rgb(62, 190, 147);
+        margin-left:.1em;
+        grid-column: 1;
+        grid-row: 1/2;
+        align-self: flex-end;
+        padding-bottom: 25vh;
+    }
+
+    .title .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: 0.4s;
+        grid-column: 2;
+        grid-row: 1/2;
+
+    }
+
+    .title .image img {
+        height: 60vh;
+        padding-right: 5vh;
+    }
+
+
+    h1 {
+        font-size: 6rem;
+        line-height: 80px;
+        letter-spacing: 2px;
+        padding-top: 1em;
+        margin-left: .1em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+        grid-column: 1;
+        grid-row: 1/2;
+    }
+
+    #about {
+        grid-column:1/5;
+        grid-row: 2;
+        display: flex;
+        background-color: white;
+        margin: 0 5rem 2rem 5rem;
+        border-radius: 25px;
+        box-shadow: 1px 1px 1px 5px hsl(160, 51%, 49%);
+    }
+
+    #about p {
+        font-size:1.5rem;
+        padding:1.5rem;
+        text-align: center;
+        font-family: 'IBM Plex Sans', sans-serif;
+        line-height: 1.75;
+    }
+
+    #links {
+        grid-column:1/5;
+        grid-row:3;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        margin-top: 2.5vh;
+        min-height: 90vh;
+    }
+
+    #oils-link {
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 40% 20% ;
+        box-shadow: 1px 1px 1px 3px hsl(160, 100%, 50%);
+        border-radius: 25px;
+        height: 97vh;
+        padding-top: 1.5rem;
+    }
+
+    #oils-link .image {
+        grid-column:1 ;
+        grid-row:1/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    #current {
+        width: 30vh;
+    }
+
+    .imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .main-image img, .imgs img {
+        height: 15vh;
+        width: auto;
+        cursor: pointer;
+    }
+
+    #oils-link .description {
+        grid-column:2 ;
+        grid-row:1/3;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    #oils-link .page-button {
+        grid-column:2 ;
+        grid-row:4;
+        display:flex;
+        align-items: center;
+        padding: 0 0 2.5rem 2.5rem;
+    }
+
+    #oils-link .page-button a:hover {
+        background-color: hsl(160, 100%, 75%);
+    }
+
+    #oils-link .page-button a {
+        text-decoration: none;
+        background-color:#fff;
+        color: #000;
+        padding: .25em 1em;
+        margin-left: .5em;
+        border: 1px solid #000;
+        border-radius: 27px;
+        margin-right: 4%;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+        transition: all ease .5s;
+        font-weight: 400;
+    }
+
+    #oils-link .image img {
+        margin-top: 1em;
+    }
+
+    #oils-link .description {
+        padding:1em;
+        height: 60vh;
+    }
+
+    #oils-link .description h3 {
+        font-size:6em;
+        color: hsl(160, 100%, 50%);
+        margin-bottom: .25em;
+        margin-top: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    #oils-link .description p {
+        font-size: 1.25em;
+        color: #333;
+        line-height: 1.5;
+        justify-self: flex-end;
+    }
+
+    .description ul {
+        font-size: 1.25em;
+        color: #333;
+        line-height: 1.6;
+        margin-top: 2rem;
+        padding-left: 2rem;
+    }
+
+    #flower-link {
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 40% 20% ;
+        box-shadow: 1px 1px 1px 3px hsl(300, 100%, 50%);
+        border-radius: 25px;
+        height: 95vh;
+        padding-top: 1.5rem;
+        margin-top: 10vh;
+    }
+
+    #flower-link .image {
+        grid-column: 2;
+        grid-row:1/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    #flower {
+        width: auto;
+        height: 30vh;
+        margin-bottom: 2rem;
+    }
+
+    .flowers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .main-image img, .flowers img {
+        width: 15vh;
+        cursor: pointer;
+    }
+
+    #flower-link .description {
+        grid-column:1 ;
+        grid-row: 1/3;
+        display:flex;
+        flex-direction: column;
+        margin-left: 5rem;
+    }
+
+    #flower-link .page-button {
+        grid-column:1 ;
+        grid-row: 4;
+        display:flex;
+        align-items: center;
+        padding: 0 0 2.5rem 6.5rem;
+    }
+
+    #flower-link .description {
+        padding:1em;
+        height: 60vh;
+    }
+
+    #flower-link .description h3 {
+        font-size: 6em;
+        color:hsl(300, 100%, 50%);
+        margin-bottom: .25em;
+        margin-top: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    #flower-link .description p {
+        font-size: 1.25em;
+        color: #333;
+        line-height: 1.5;
+        justify-self: flex-end;
+    }
+
+
+    #flower-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+        padding: .25em 1em;
+        margin-left: 0;
+        border-radius: 27px;
+        margin-right: 4%;
+        text-align: center;
+        font-size: 1.8em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin-top:.75em;
+        text-transform: uppercase;
+        transition: all ease .5s;
+    }
+
+        #flower-link .page-button a:hover {
+            background-color: hsl(300, 100%, 75%);
+        }
+
+    #edibles-link {
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 40% 20% ;
+        box-shadow: 1px 1px 1px 3px hsl(75, 100%, 50%);
+        border-radius: 25px;
+        height: 95vh;
+        padding-top: 1.5rem;
+        margin-top: 10vh;
+    }
+
+    #edibles-link .image {
+        grid-column:1 ;
+        grid-row:1/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    #fruit {
+        height: 35vh;
+        width: auto;
+        margin-bottom: 5vh;
+    }
+
+    .fruits {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    } 
+
+    .fruits img {
+        height: 15vh;
+        width: auto;
+        cursor: pointer;
+        display: flex;
+        justify-self: center;
+    }
+
+    .main-image img {
+        height: 15vh;
+        width: auto;
+        cursor: pointer;
+    }
+
+    #edibles-link .description {
+        grid-column:2/5 ;
+        grid-row:1;
+    }
+
+    #edibles-link .page-button {
+        grid-column:2 ;
+        grid-row:2;
+        display:flex;
+    }
+
+    #edibles-link .description {
+        grid-column:2 ;
+        grid-row:1/3;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding:1em;
+        height: 60vh;
+    }
+
+    #edibles-link .description h3 {
+        font-size:6.5em;
+        color: hsl(75, 100%, 50%);
+        margin-bottom: .25em;
+        margin-top: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    #edibles-link .description p {
+        font-size: 1.25em;
+        color: #333;
+        line-height: 1.5;
+        justify-self: flex-end;
+    }
+
+    #edibles-link .page-button {
+        grid-column:2 ;
+        grid-row:4;
+        display:flex;
+        align-items: center;
+        padding: 0 0 2.5rem 2.5rem;
+    }
+
+    #edibles-link .page-button a {
+        text-decoration: none;
+        background-color:#fff;
+        color: #000;
+        padding: .25em 1em;
+        margin-left: .5em;
+        border: 1px solid #000;
+        border-radius: 27px;
+        margin-right: 4%;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+        transition: all ease .5s;
+        font-weight: 400;
+    }
+
+    
+        #edibles-link .page-button a:hover {
+            background-color: hsl(75, 100%, 75%);
+        }
+
+    #footer-wrapper {
+        margin-top:.5rem;
+    }
+
+  
+    #mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .page-wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto ;
+    }
+
+    .title {
+        grid-column: 1;
+        grid-row:1/2;
+       /* background-image: url("../global/img/sample-exp.jpg");  #add an image here !*/
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: flex-start;
+        height: 80vh;
+    }
+
+    .title .short {
+        font-family:'IBM Plex Sans', sans-serif;
+        font-size:1em;
+        padding: 1em 1em;
+        color: rgb(62, 190, 147);
+        margin-left:.1em;
+        text-align: center;
+    }
+
+    .title .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+  #mobile {
+      height: 25vh;
+  }
+    
+    h1 {
+        font-size: 2.5rem;
+        line-height: 80px;
+        letter-spacing: .5px;
+        padding-top: 1em;
+        margin-left: .1em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+    
+    }
+
+    #about {
+        grid-column:1;
+        grid-row: 2;
+        background-color: white;
+        display: flex;
+        margin:2rem 1rem;
+        margin-top:0;
+        border-radius: 25px;
+        box-shadow: 1px 1px 1px 2px hsl(160, 51%, 49%);
+    }
+
+    #about p {
+        font-size:1.125rem;
+        padding:1rem;
+        line-height: 1.25;
+        color: #333;
+    }
+
+
+    #links {
+        grid-column:1;
+        grid-row:3;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        margin-top: 2.5vh;
+        min-height: 90vh;
+    }
+
+    .description ul {
+        font-size: .85rem;
+        color: #333;
+        line-height: 1.6;
+        margin-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    #oils-link {
+        display:grid;
+        grid-template-rows: repeat(2, .7fr);
+        padding-bottom: 1.5rem;
+        box-shadow: 1px 1px 1px 3px hsl(160, 100%, 50%);
+        border-radius: 25px;
+    }
+
+    #oils-link .image {
+        grid-row: 1;
+        height: 50vh;
+    }
+
+    #current {
+        height: 30vh;
+        width: auto;
+    }
+
+    .imgs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2vh;
+        padding: 0 .75rem;
+    }
+
+    .main-image img, .imgs img {
+        height: 7vh;
+        width: auto;
+        cursor: pointer;
+    }
+
+    .main-img {
+        display: flex;
+        justify-content: center;
+        padding: 1.75rem 1rem 1rem 1rem;
+    }
+
+    #oils-link .description {
+        grid-row: 2;
+        padding: 1rem;
+    }
+
+    #oils-link .description h3 {
+            font-size: 2.75rem;
+            color: hsl(160, 100%, 50%);
+            margin-bottom: .25em;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+    }
+
+    #oils-link .description p {
+        font-size: .85em;
+        color: #333;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    #oils-link .page-button{
+        display:flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    #oils-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+        padding: .25em .75em;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin: .25em .75em .75em;
+        text-transform: uppercase;
+        transition: all ease .2s;
+        }
+
+    #oils-link .page-button a:active {
+            border-color:hsl(160, 100%, 75%);
+        }
+
+    #flower-link {
+        display:grid;
+        grid-template-rows: repeat(2, .7fr);
+        padding-bottom: 1.5rem;
+        box-shadow: 1px 1px 1px 3px hsl(300, 100%, 50%);
+        border-radius: 25px;
+        margin-top: 10vh;
+    }
+
+    #flower-link .image {
+        grid-row: 1;
+        height: 50vh;
+    }
+
+    #flower {
+        height: 25vh;
+        width: auto;
+    }
+
+    .flowers {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1rem;
+        justify-items: center;
+    }
+
+    .main-image img, .flowers img {
+        height: 7vh;
+        width: auto;
+        cursor: pointer;
+    }
+
+    .main-img {
+        display: flex;
+        justify-content: center;
+        padding: 3rem 1rem 1rem 1rem;
+    }
+
+ 
+    #flower-link .description {
+        grid-row: 2;
+        padding: 1rem;
+        padding:1em;
+    }
+
+
+    #flower-link .description h3 {
+        font-size: 2.25rem;
+        color: hsl(300, 100%, 50%);
+        margin-bottom: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #flower-link .description p {
+        font-size: .85em;
+        color: #333;
+        text-align: center;
+    }
+
+
+    #flower-link .page-button{
+        display:flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    #flower-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+        padding: .25em .75em;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin: .75em;
+        text-transform: uppercase;
+        transition: all ease .2s;
+    }
+
+    #flower-link .page-button a:active {
+        border-color: hsl(300, 100%, 75%);
+    }
+
+
+    #edibles-link {
+        display:grid;
+        grid-template-rows: repeat(2, .7fr);
+        padding-bottom: 1.5rem;
+        box-shadow: 1px 1px 1px 3px hsl(75, 100%, 50%);
+        border-radius: 25px;
+        margin-top: 10vh;
+    }
+
+    #edibles-link .image {
+        grid-row: 1;
+        height: 50vh;
+    }
+
+    #fruit {
+        height: 25vh;
+        width: auto;
+    }
+
+    .fruits {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1rem;
+        justify-items: center;
+    }
+
+    .main-image img, .fruits img {
+        height: 7vh;
+        width: auto;
+        cursor: pointer;
+    }
+
+    .main-img {
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 1rem 1rem 1rem;
+    }
+
+
+    #edibles-link .description {
+        padding:.5rem 1rem 1rem 1em;
+    }
+
+
+    #edibles-link .description h3 {
+        font-size: 2.5rem;
+        color: hsl(75, 100%, 50%);
+        margin-bottom: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #edibles-link .description p {
+        font-size: .9em;
+        color: #333;
+        text-align: center;
+    }
+
+    #edibles-link .description ul {
+        font-size: .9rem;
+    }
+
+
+    #edibles-link .page-button{
+        display:flex;
+        justify-content: center;
+    }
+
+    #edibles-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+        padding: .25em .75em;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin: .75em;
+        text-transform: uppercase;
+        transition: all ease .2s;
+    }
+
+    #edibles .page-button a:active {
+        border-color: hsl(75, 100%, 40%);
+    }
+
+    #footer-wrapper {
+        margin-top:.5rem;
+    }
+
+    .description .additional {
+        display: none;
+    }
+
+    .title .image #desktop {
+        display: none;
+    }
+
+
+}

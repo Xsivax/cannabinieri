@@ -1,0 +1,493 @@
+body {
+   overflow-x: hidden;
+
+}
+.global-wrapper {
+   width: 100%;
+}
+
+.page-wrapper {
+   display:grid;
+   width: 100%;
+}
+
+.info h1 {
+   color:rgb(191, 255, 0);
+   font-family:'IBM Plex Sans', sans-serif;
+   text-transform: uppercase;
+   justify-self: center;
+   align-self: center;
+   padding-top: 2.5rem;
+   margin-bottom: 1.5rem;
+}
+
+.info h1 span{
+   color:rgb(191, 255, 0);
+}
+.info p {
+   color: black;
+
+}
+
+.info p span {
+   color:rgb(191, 255, 0);
+   font-weight: 600;
+}
+
+.info img {
+   width: 25vh;
+   height: auto;
+   align-self: center;
+   margin-top: 5vh;
+}
+
+.about p span {
+   color:rgb(191, 255, 0);
+   font-weight: 400;
+}
+
+.product p span{
+   color:rgb(62, 190, 147);
+} 
+
+.product h5 {
+   color: #333;
+
+}
+
+.product p a {
+   text-decoration: none;
+   color: rgb(191, 255, 0);
+}
+
+.product p a:hover {
+   opacity: 50%;
+   color:rgb(62, 190, 147)
+}
+
+.product p a:active {
+   opacity: 50%;
+   color:rgb(62, 190, 147)
+}
+
+
+@media (max-width:480px) {
+  .page-wrapper {
+   grid-template-columns: 100%;
+   grid-template-rows: auto auto;
+   grid-template-areas:
+   "info"
+   "page-content";
+   width: 100%;
+  }
+
+  .info {
+   width:100%;
+   height: 62.5vh;
+   grid-area: info;
+   display: flex;
+   flex-direction: column;
+   margin: 10vh 0 1vh;
+}
+
+.info p {
+   font-size: .95rem;
+   margin: 1rem;
+   text-align: center;
+}
+
+.info h1 {
+   font-size: 2.5rem;
+}
+
+.image {
+   display:flex;
+   justify-content: center;
+}
+
+.info img {
+   width: 35vh;
+   height: auto;
+   align-self: center;
+   margin-top: 0;
+}
+
+
+.things-container {
+   width: 100%;
+   grid-area: page-content;
+   padding: 1rem;
+   padding-top: 1.5rem;
+   position: relative;
+   width: 100%;
+   min-height: 100vh;
+   overflow: hidden;
+   background-color:rgb(191, 255, 0);
+   display:flex;
+  flex-direction: column;
+}
+
+.strip {
+   height: auto;
+   grid-template-columns: 1fr;
+   grid-template-rows: .95fr 1fr;
+   padding:.75rem;
+   background-color: white;
+   border-radius: 25px;
+}
+.strip .about {
+   grid-column: 1;
+   grid-row: 1;
+}
+
+.about h3 {
+   font-size: 2rem;
+   line-height: 3rem;
+   color: rgb(191, 255, 0);
+   margin: 1rem 0;
+}
+
+
+.about p {
+   margin: 1rem 0;
+}
+
+.about img {
+   width:40vh;
+   height: auto;
+   padding: 1rem 0 2rem 0;
+}
+
+.strip2 {
+   padding:.75rem;
+   background-color: white;
+   border-radius: 25px;
+   z-index: 10000;
+   margin-top: 3vh;
+   min-height: 90vh;
+}
+
+.products h3 {
+   font-size: 1.5rem;
+   line-height: 3rem;
+   color: rgb(62, 190, 147);
+   margin: 1rem 0 0 1.5rem;
+   text-transform: uppercase;
+   font-family:'IBM Plex Sans', sans-serif;
+}
+
+.products img {
+   width: 20vh;
+   margin: 1rem;
+}
+
+.products h5 {
+   font-size: 1.35rem;
+   font-family:'IBM Plex Sans', sans-serif;
+   text-transform: uppercase;
+   margin-bottom: .5rem;
+}
+
+.products p {
+   text-align: center;
+   margin: .75rem;
+}
+
+.product {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 1px 1px 1px 1px #999;
+   border-radius: 25px;
+   padding: 1rem;
+}
+
+.product .image {
+   margin: 1rem 0;
+}
+
+.product .click {
+   margin: 1rem;
+}
+
+.product .click button {
+   padding: .5rem 1.25rem;
+   background-color: black;
+   border: none;
+   font-size: 1.25rem;
+   font-family:'Fira Sans', sans-serif;
+   line-height: 1rem;
+   border-radius: 25px;
+   font-weight: 600;
+   cursor: pointer;
+   transition: .3s;
+   margin-top: 1rem;
+   margin-left: .25rem;
+   transition: .5s;
+}
+
+.product .click button a {
+   text-decoration: none;
+   color: white;
+}
+
+.product .click button:active {
+opacity: 50%;
+color: rgb(191, 255, 0);
+}
+
+#app {
+   margin-left: 5vh;
+   text-decoration: none;
+   color: white;
+}
+
+
+#desktop {
+   display:none;
+}
+}
+
+@media (min-width:768px){
+ 
+   .page-wrapper {
+       grid-template-columns: 100%;
+       grid-template-rows: auto auto;
+       grid-template-areas:
+       "info"
+       "page-content";
+       width: 100%;
+   }
+
+   .info {
+       width:100%;
+       height: 60vh;
+       grid-area: info;
+       display: grid;
+       grid-template-columns: repeat(2, 50%);
+       grid-template-rows: repeat(2, 50%);
+   }
+
+   .info h1 {
+       grid-column: 1/3;
+       grid-row: 1;
+       font-size: 6.5rem;
+       display: flex;
+       justify-self: flex-start;
+       margin: 0 0 0 25rem;
+       
+   }
+
+   .info p {
+       grid-column: 1/3;
+       grid-row: 2;
+       font-size: 1.35rem;
+       margin: 0 1rem 1rem 1rem;
+       text-align: left;
+       line-height: 2.25rem;
+       letter-spacing: .5px;
+       justify-self: center;
+   }
+
+   .info p span {
+      margin-left: 6rem;
+   }
+
+   .info img {
+       width: 50vh;
+       height: auto;
+       grid-column: 2;
+       grid-row: 1/3;
+       display:flex;
+       justify-self: center;
+       align-self: center;
+       margin-top: 8vh;
+       margin-left: 4vh;
+   }
+
+
+   .things-container {
+       width: 100%;
+       grid-area: page-content;
+       padding:2rem;
+       overflow: hidden;
+       background-color:rgb(191, 255, 0);
+       display:flex;
+       flex-direction: column;
+   }
+
+   .strip {
+       padding:2.5rem 0 0 2.5rem;
+       background-color: white;
+       border-radius: 25px;
+       z-index: 10000;
+       min-height: 80vh;
+       width: 90vh;
+       align-self: center;
+   }
+
+   .about {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: .2fr 1fr;
+   }
+
+   .about h3 {
+       font-size: 2.5rem;
+       line-height: 3rem;
+       color:rgb(191, 255, 0);
+       margin: 2rem 0 0 5rem;
+       grid-column: 1/3;
+       display: flex;
+       justify-self: flex-start;
+   }
+
+   .about span {
+       color: rgb(191, 255, 0)
+       ;
+   }
+   
+   .about p {
+       margin: 1rem 0 0 1rem;
+       float: left;
+       font-size: 1.5rem;
+       grid-column: 1/2;
+       padding: 2rem 4rem;
+   }
+
+   .about .image {
+       grid-column: 2;
+       grid-row:1/3;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   
+   .about img {
+       width:55vh;
+       height: auto;
+       margin-top: 10vh;
+   }
+
+   .strip2 {
+       padding: 2rem;
+       background-color: white;
+       border-radius: 25px;
+       z-index: 10000;
+       margin-top: 3vh;
+       min-height: 90vh;
+       padding-bottom: 8vh;
+   }
+   
+   .products h3 {
+       font-size: 2.5rem;
+       line-height: 3rem;
+       color: rgb(62, 190, 147);
+       margin: 3rem 0 3rem 1.5rem;
+       text-transform: uppercase;
+       font-family:'IBM Plex Sans', sans-serif;
+       padding-left: 1.5rem;
+   }
+   
+   .products img {
+       width: 50vh;
+   }
+   
+   .product h5 {
+   font-size: 1.5rem;
+   font-family:'IBM Plex Sans', sans-serif;
+   text-transform: uppercase;
+   margin-bottom: 1.5rem 1rem;
+   }
+   
+   .products p {
+       text-align: center;
+       margin: 1rem;
+   }
+   
+   .product {
+       display: grid;
+       grid-template-columns: .25fr 1fr;
+       grid-template-rows: .25fr .5fr .25fr;
+       box-shadow: 3px 3px 3px 3px #eee;
+       border-radius: 25px;
+       padding: 4rem;
+   }
+
+   .product .image {
+       grid-column: 1;
+       grid-row:1/3;
+       padding: 3vh;
+       margin: 1rem 0;
+       display: flex;
+       align-items: center;
+       margin: 4rem 0 0 4rem;
+   }
+
+   .product h5 {
+       grid-column: 2;
+       grid-row: 1;
+       font-size: 3rem;
+       display:flex;
+       justify-self: center;
+       align-self: flex-end;
+   }
+
+   .product h5 span{
+       color: #999;
+   } 
+
+   .product p {
+       display:flex;
+       flex-direction: column;
+       justify-self: center;
+       align-self: center;
+       grid-column: 2;
+       grid-row: 2;
+       padding: 0 2.5rem;
+       font-size: 1.15rem;
+   }
+
+   .product .click {
+       grid-column: 2;
+       grid-row: 3;
+       display:flex;
+       justify-self: center;
+       align-self: center;
+       justify-content: space-between;
+       padding: 0 0 2.5rem 0;
+   }
+   
+   .product .click button  {
+       padding: .75rem 1.5rem;
+       background-color: black;
+       border: none;
+       font-size: 1.5rem;
+       color: white;
+       font-family:'Fira Sans', sans-serif;
+       line-height: 1rem;
+       border-radius: 25px;
+       font-weight: 600;
+       cursor: pointer;
+       transition: .3s;
+       margin-top: 1rem;
+       margin-left: .25rem;
+   }
+
+   .product .click button a {
+       color: white;
+       text-decoration: none;
+   }
+   
+   .product .click button:hover {
+       opacity: 50%;
+       background-color: rgb(191, 255, 0);
+   }
+   
+   #app {
+       margin-left: 10vh;
+   }
+   
+}
+

@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-eqiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" type="text/css" href="css/deutsch.css">
+  <link rel="stylesheet" type="text/css" href="static/pages/global_css/nav.css">
+  <link href="https://fonts.googleapis.com/css2?family=Asap&family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/Logo.svg">
+  <title>
+    Cannabinieri CBD
+</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="top-bar">
+            <div class="languages">
+                <a  href="static/languages/deutsch.html">Deutsch |</a>
+				<a  href="static/languages/italiano.html">Italiano |</a>
+				<a  href="static/languages/francais.html">Francais </a>
+            </div>
+            <a class="button" href="#">Shop</a>
+         </nav>
+        <div id="main-bar">
+                <div id="logo-container">
+                        <img class="logo" src= "img/Logo.svg">
+                        <h3 id="name" >cannabinieri</h3>
+                </div>
+                <nav class="main-navigation-bar">
+                        <ul>
+                        <li><a href="static/pages/experiments.html">EXPERIMENTS</a>
+                                <ul class="experiments">
+                                        <li><a href="pages/flower.html">Flower</a></li>
+                                        <li><a href="static/pages/oils.html">Oils</a></li>
+                                        <li><a href="static/pages/edibles.html">Edibles</a></li>
+                                </ul>
+                </ul>
+
+                <ul>
+                        <li><a href="static/pages/permaculture.html">PERMACULTURE</a>
+                                <ul>
+                                        <li><a href="static/pages/permapp.html">PermApp</a></li>
+                                        <li><a href="static/pages/greenlab.html">GreenLab</a></li>
+                                        <li><a id="edit" href="static/pages/whatsthat.html">What's that ?</a></li>
+                                </ul>
+                </ul>
+
+                <ul>
+                        <li><a href="static/pages/greentech.html">GREENTECH</a>
+                                <ul>
+                                        <li><a href="static/pages/automation.html">Automation</a></li>
+                                        <li><a href="static/pages/iot.html">IoT</a></li>
+                                        <li><a href="static/pages/diy.html">DiY</a></li>
+                                </ul>
+                </ul>
+
+                <ul>
+                        <li><a href="static/pages/spider.html">SPIDER</a>
+                                <ul>
+                                        <li><a href="static/pages/spiderpi.html">SpiderPi</a></li>
+                                        <li><a href="static/pages/join.html">Join</a></li>
+                                </ul>
+                </ul>
+
+                <ul>
+                        <li><a href="static/pages/learn.html">LEARN</a>
+                                <ul id="learn">
+                                        <li><a href="static/pages/whoweare.html">About Us</a></li>
+                                        <li><a href="static/pages/partners.html">Partners</a></li>
+                                        <li><a href="static/pages/meet.html">Meet</a></li>
+                                        <li><a href="static/pages/blog.html">Blog</a></li>
+                                        <li><a href="static/pages/code.html">Code</a></li>
+
+                                </ul>
+                </ul>
+                </nav>
+                <nav class="hamburger-wrap">
+                        <input type="checkbox" class="ham-btn" id="ham-btn">
+                        <label for="ham-btn" class="hamburger" onclick= "menu()" onclick="hide()">
+                                <span class="hamburger-icon"></span>
+                        </label>
+                </nav>  
+                <div id="mobile-dropdown-container">
+                        <div id="mobile-dropdown">
+                                <ul>
+                                        <li onclick="menu2()"><a href="static/pages/experiments.html">EXPERIMENTS</a>
+                                                <span class="drop">
+                                                        <i class="arrow down"></i>
+                                                </span>
+                                                <ul id="down">
+                                                        <li><a href="static/pages/flower.html">Flower</a></li>
+                                                        <li><a href="static/pages/oils.html">Oils</a></li>
+                                                        <li><a href="static/pages/edibles.html">Edibles</a></li>
+                                                </ul>
+                                </ul>
+                
+                                <ul>
+                                        <li onclick="menu3()"><a href="static/pages/permaculture.html">PERMACULTURE</a>
+                                                <span class="drop">
+                                                        <i class="arrow down"></i>
+                                                </span>
+                                                <ul id="down1">
+                                                        <li><a href="static/pages/permapp.html">PermApp</a></li>
+                                                        <li><a href="static/pages/greenlab.html">GreenLab</a></li>
+                                                        <li><a href="static/pages/whatsthat.html">What's that ?</a></li>
+                                                </ul>
+                                </ul>
+                
+                                <ul>
+                                        <li onclick="menu4()"><a href="static/pages/greentech.html">GREENTECH</a>
+                                                <span class="drop">
+                                                        <i class="arrow down"></i>
+                                                </span>
+                                                <ul id="down2">
+                                                        <li><a href="static/pages/automation.html">Automation</a></li>
+                                                        <li><a href="static/pages/iot.html">IoT</a></li>
+                                                        <li><a href="static/pages/diy.html">DiY</a></li>
+                                                </ul>
+                                </ul>
+                
+                                <ul>
+                                        <li onclick="menu5()"><a href="static/pages/spider.html">SPIDER</a>
+                                                <span class="drop">
+                                                        <i class="arrow down"></i>
+                                                </span>
+                                                <ul id="down3">
+                                                        <li><a href="static/pages/spiderpi.html">SpiderPi</a></li>
+                                                        <li><a href="static/pages/join.html">Join</a></li>
+                                                </ul>
+                                </ul>
+                
+                                <ul>
+                                        <li onclick="menu6()"><a href="static/pages/learn.html">LEARN</a>
+                                                <span class="drop">
+                                                        <i class="arrow down"></i>
+                                                </span>
+                                                <ul id="down4">
+                                                        <li><a href="static/pages/whoweare.html">About Us</a></li>
+                                                        <li><a href="static/pages/partners.html">Partners</a></li>
+                                                        <li><a href="static/pages/meet.html">Meet</a></li>
+                                                        <li><a href="static/pages/blog.html">Blog</a></li>
+                                                        <li><a href="static/pages/code.html">Code</a></li>
+                
+                                                </ul>
+                                </ul>
+                                </nav>
+                                <a class="button" href="#">Shop</a>
+                                <div class="languages">
+                                        <a  href="static/languages/deutsch.html">Deutsch |</a>
+                                                        <a  href="static/languages/italiano.html">Italiano |</a>
+                                                        <a  href="static/languages/francais.html">Francais </a>
+                                    </div>
+                        </div>
+                </div>     
+        </div>
+        <main>
+                <section id="content">
+                    <div class="section1">
+                            <div id="title">
+                                    <h3>Cannabinieri</h3>
+                            </div>
+                           <div id="slogan">
+                                           <h2>Growing further.</h2>
+                           </div>
+                           <div id="image">
+                                    <img id="leaves" src="static/img/sample-home.jpg">
+                            </div>
+                            <div id="about">
+                                    <a href="#about-us">About Us</a>
+                                    <i class='fas fa-chevron-down'></i>
+                            </div>
+                            <div id="black">
+                                    
+                            </div>
+                    </div>
+                    <div class="section2" id="about-us">
+                            <h3>About Us</h3>
+                            <p>Our goal is to do produce 100% organic CBD using only the natural ecosystem that surrounds us as a fertilizer and utilizing modern day DIY robotics solutions to digitalize and understand the system of relations between plants in order to  build machines that <strong>work with it</strong> for <strong>everyone</strong>. 
+                            </p>
+                    </div>
+                    <div class="section3">
+                            <h3>The Place and the Permaculture</h3>
+                            <p> Permaculture keeps our plants healthy and makes us understand our planet</p>
+                            <img id ="sample"src="static/img/sample.jpg">
+                    </div>
+                    <div class="section4">
+                            <h3>The Tech</h3>
+                            <p>Our goal is the automation of all the stages of a plants life until harvest time. 
+                                    Everyone should be able to grow their own organic crops without missing out at work and in flexibility.
+                                    DiY robotics and the Internet of Things makes it possible. We make it accessible. Our open-source approach invites everyone to design their own robots, based on teir needs.
+                            </p>
+                    </div>
+                    <div class="section5">
+                            <h3>The Spider</h3>
+                            <p>This is SpiderPi. He will soon grow organic plants for you :)</p>
+                            <img id="sample" src="static/img/hexapod-owned!.jpeg">
+                    </div>
+                    <div class="section6">
+                            <h3>The News</h3>
+                            <p>Posts from the Blog</p>
+                    </div>
+                    </section>
+            </main>
+        <footer class="footer">
+            <div id="footer-wrapper">
+                <div id="column1">
+                        <a href="responsive.html">
+                        <img id="footer-logo" src="static/img/Logo.svg">
+                        </a>
+                </div>
+                <div id="column2">
+                    <h6 onclick="show()">Information
+                            <span class="show">
+                                    <i class="arrow down"></i>
+                            </span>
+                   </h6> 
+                                <ul id="information">
+                        		<li>
+                                                <p>
+                                                        <a href="#">Contact Us</a>
+                                                </p>
+                                        </li>
+                                	<li>
+                                                <p>
+                                                        <a href="#">FAQ</a>
+                                                </p>
+                                                
+                                                </li>
+                                                <li>
+                                                        <p>
+                                                                <a href="#">Certificate of Analysis</a>
+                                                        </p>
+                                                        
+                                                </li>
+
+                       		</ul>
+                </div>
+               
+                <div id="column3">
+                    <h6 onclick="display()">links
+                        <span class="show">
+                                <i class="arrow down2"></i>
+                        </span>
+                    </h6>
+                                <ul id="links">
+                        		<li>
+                                                <p>
+                                                        <a href="#">Blog</a>
+                                                </p>
+                                        </li>
+                                	<li>
+                                                <p>
+                                                        <a href="#">Shop</a>
+                                                </p>
+                                                
+                                                </li>
+                                                <li>
+                                                        <p>
+                                                                <a class="code" href="#">Code</a>
+                                                        </p>
+                                                        
+                                                </li>
+
+                       		</ul>
+                </div>
+                <div id="column4">
+                    <h6>TO BE SAID</h6>
+                                <p> All our products contain less than 0.2% THC</p>
+                </div>
+                <div id="column5">
+                    <h6 class="follow">Follow us</h6>
+                               <div id="social-media">
+                                <ul>
+                                    <li class="youtube">
+                                            <a href="#">
+                                                    <img id="youtube" src="static/img/youtube.png">
+                                            </a>
+                                    </li>
+                                    <li>
+                                            <a href="#">
+                                                    <img id="instagram" src="static/img/instagram.png">
+                                            </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                                <img id="gitea" src="static/img/gitea.svg">
+                                        </a>
+                                </li>
+                            </ul>
+                               </div>
+                </div>
+                <div id="row2">
+                    <p>©2020 Cannabinieri</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
