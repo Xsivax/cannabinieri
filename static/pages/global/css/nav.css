@@ -1,8 +1,15 @@
 @font-face {
     font-family: 'Fira Sans Thin', sans-serif;
-        src: url('fonts/FiraSans-Light.ttf') format('truetype');
+        src: url('fonts/FiraSans-Thin.ttf') format('truetype');
         font-style: normal; 
-        font-weight: 300;
+        font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+        src: url('fonts/Lato-Thin.ttf') format('truetype');
+        font-style: normal; 
+        font-weight: 100;
 }
 
 *{
@@ -127,6 +134,7 @@ margin-top:6em;
     text-decoration: none;
     justify-content: space-between;
     line-height: 50px;
+    font-family: 'Lato' , sans-serif;
     font-weight: 300 !important;
     padding: 2vw;
 }
@@ -303,7 +311,8 @@ margin-top:6em;
     justify-self: center;
     align-self: center;
     margin-bottom: 1vh;
-    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
                         
  #mobile-dropdown ul li a:hover ,#mobile-dropdown ul li a:active{

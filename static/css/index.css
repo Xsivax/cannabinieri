@@ -2,7 +2,7 @@
         font-family: 'Fira Sans', sans-serif;
         src: url('fonts/FiraSans-Light.ttf') format('truetype');
         font-style: normal;
-        font-weight: 300;
+        font-weight: 100;
     }
 
     @font-face {
@@ -42,6 +42,7 @@
         "footer footer footer footer";
         font-family: 'Fira Sans', sans-serif;
         font-weight: 100;
+        -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
     }
 
@@ -356,7 +357,6 @@
     grid-template-rows: 25% 25% 25% 25%;
     height: 65vh;
     width: 100vw;
-    overflow-x: hidden;
 }
 
 .section1 #title {

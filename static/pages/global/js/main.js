@@ -11,7 +11,7 @@ function show() {
 //this function shows element2 by id -to be generalized
 
 function display() {
-    var x= document.getElementById("links");
+    var x= document.getElementById("footer-links");
     if (x.style.display === "none") {
         x.style.display = "flex";}
         else {

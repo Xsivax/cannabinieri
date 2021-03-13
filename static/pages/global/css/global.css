@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Fira Sans', sans-serif;
+    src: url('fonts/FiraSans-Thin.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+    
     *{
     	margin:0;
         padding:0;
@@ -50,8 +57,7 @@
         "main main main main"
         "footer footer footer footer";
         font-family: 'Fira Sans', sans-serif;
-        font-weight:500;
-    
+        font-weight: 100;
     }
 
 }
