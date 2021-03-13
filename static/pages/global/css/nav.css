@@ -50,6 +50,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 2vh;
+
 }
 
 .languages a {
@@ -62,7 +63,7 @@ body {
 }
 
 .languages a:hover {
-    color:  rgb(62, 190, 147);
+    color:  hsl(160, 51%, 60%);
 }
 
 #main-bar {
