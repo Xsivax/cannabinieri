@@ -1,6 +1,6 @@
     @font-face {
-        font-family: 'Fira Sans', sans-serif;
-        src: url('fonts/FiraSans-Light.ttf') format('truetype');
+        font-family: 'Lato', sans-serif;
+        src: url('fonts/Lato-Thin.ttf') format('truetype');
         font-style: normal;
         font-weight: 100;
     }
@@ -17,9 +17,32 @@
         box-sizing:border-box;
     } 
 
-    :root{
+    :root {
         --top_padding:5px;
-    }
+ 
+        --gradient1: linear-gradient(
+            45deg,
+            hsl(160, 51%, 49%), 
+            hsl(160, 51%, 59%), 
+            hsl(160, 51%, 79%),
+            hsl(160, 51%, 89%),
+            #fff
+        );
+
+        --gradient2: radial-gradient(
+            #000, 
+            #333, 
+            #999,
+            #eee,
+            #fff
+        );
+
+        --gradient3: radial-gradient(
+            hsl(160, 51%, 79%),
+            #fff,
+            #eee
+        );
+    };
 
     html,
     body {
@@ -40,7 +63,7 @@
         "main-bar main-bar main-bar main-bar"
         "main main main main"
         "footer footer footer footer";
-        font-family: 'Fira Sans', sans-serif;
+        font-family: 'Lato', sans-serif;
         font-weight: 100;
         -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
@@ -166,10 +189,11 @@
         display: grid;
         grid-template-columns: 1fr 0.8fr 1fr 1fr;
         grid-template-rows: 2fr 1fr;
-        padding-bottom:1%;
-        padding-top:3%;
-        font-family: 'Fira Sans', sans-serif;
-        font-weight: 100;
+        padding: 10vh 5vh 5vh 5vh ;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        min-height: 60vh;
+        min-width: 100vw;
      }
 
         #column1 {
@@ -188,77 +212,92 @@
             padding-right: 20%;
         }
         
-        #column2 {
-            display:block;
-            text-align: left;
-            padding-left: 20%;
-            margin-top:10%;
-            grid-column: 1;
-
-            
-        }
+    #column2 {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        grid-column: 1;
+    }
 
         #column2 ul {
             list-style: none;
+            text-align: center;
         }
         
-        #column2 ul li p a {
-            text-decoration:none;
-            color:white;
-        }
+    #column2 ul li p a {
+        text-decoration:none;
+        color:white;
+        font-weight: 400;
+        font-size: 2.25vh;
+    }
         
-        #column2 ul li {
-            margin-bottom: 5%;
-        }
+    #column2 ul li {
+        margin: 4.4vh
+    }
         
-        h6 {
-            font-size: 135%;
-            padding-bottom: 6%;
-            text-transform: uppercase;
-        }
+    h6 {
+        font-size: 2.85vh;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+        
+    #column2 ul li a:hover {
+        color: hsl(160, 100%, 90%);
+    }
 
-        #column3 {
-            padding-left:10%;
-            margin-top: 10%;
-        }
+    #column3 {
+        display:flex;
+        flex-direction: column;
+    }
+
+    #column3 h6 {
+        text-align: center;
+    }
         
-        #column2 ul li a:hover {
-            color: rgb(0, 255, 170);
-        }
+    #column3 ul {
+        list-style: none;
+        text-align: center;
+    }
         
-        #column3 ul {
-            list-style: none;
-        }
-        #column3 ul li p a {
-            text-decoration:none;
-            color:white;
-        }
+    #column3 ul li p a {
+        text-decoration:none;
+        color:white;
+        font-weight: 400;
+        font-size: 2.35vh;
+    }
         
-        #column3 ul li {
-            margin-bottom: 5%;
-            text-align:left;
-        }
+    #column3 ul li {
+        text-align: center;
+        margin: 4.5vh;
+    }
         
         #column3 ul li a:hover {
-            color: rgb(0, 255, 170);
+            color:  hsl(160, 100%, 90%);
         }
 
-        #column4 {
-            margin-top:7%;
-            padding-right: 10%;
-        }
+    #column4 {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
 
-        #column4 p {
-            font-size:14px;
-        }
+    #column4 p {
+        font-size: 2.35vh;
+        font-weight: 300;
+        line-height: 4vh;
+        margin-top: 4.5vh;
+        text-align: center;
+    }
 
-        #column5 {
-            margin-top: 7%;
-        }
+    #column5 {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
         
-        #social-media ul {
-            margin-top:1%;
-        }
+    #social-media ul {
+        margin-top: 4.5vh
+    }
 
         #social-media ul li {
             display:inline;
@@ -277,17 +316,17 @@
         
         #youtube {
             height: auto;
-            width: 7%;
+            width: 2vw;
         }
         
         #instagram {
             height:auto;
-            width: 7%;
+            width: 3vw;
         }
 
         #gitea {
             height:auto;
-            width: 10%;
+            width: 3vw;
         }
         
         #row2 {
@@ -343,8 +382,8 @@
     "greentech"
     "about"
     "news";
-    font-family: 'Fira Sans', sans-serif;
-    font-weight:100;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     grid-gap: 0.2em;
     width: 100%;
 }
@@ -615,17 +654,15 @@
     font-size: 10vh;
     line-height: 80px;
     letter-spacing: .5px;
-    padding: 1em 0 .5em 1em;
+    padding: 6vh 0 4vh 8vh;
     text-transform: uppercase;
     font-weight: 800;
     display: flex;
     align-self: center;
-    justify-self: center;
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
-
 
 .section2 p {
     grid-column: 1;
@@ -633,8 +670,7 @@
     font-size: 2.65vh;
     padding: 1.75rem 3.5rem;
     color: rgb(62, 190, 147);
-    line-height: 1.5em;
-    font-weight: 100;
+    line-height: 6vh;
     text-align: center;
 }
 
@@ -649,10 +685,11 @@
 
 .section2 .page-button a {
     text-decoration: none;
-    background-color: #000;
-    color:white;
+    background-color: #fff;
+    color: #000;
+    border: .01em solid #000;
     padding: .35em 1.5em;
-    border-radius: 27px;
+    border-radius: 25px;
     text-align: center;
     font-size: 1.45rem;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -664,7 +701,7 @@
 
 .section2 .page-button a:hover {
     opacity: 50%;
-    background-color: hsl(160, 51%, 60%);
+    color: hsl(160, 51%, 80%);
 }
 
 #black {
@@ -776,7 +813,7 @@
     display: flex;
     align-self: center;
     justify-self: center;
-    padding: 1em 0 .5em 0;
+    padding: 6vh 0 4vh 8vh;
     color: #000;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
@@ -788,8 +825,8 @@
         font-size: 1.25rem;
         padding: 2vh 5vh;
         color: hsl(160, 51%, 60%);
-        line-height: 1.75em;
-        font-weight: 100;
+        line-height: 6vh;
+        font-weight: 300;
         text-align: center;
     }
     
@@ -805,8 +842,9 @@
     
     .section3 .page-button a {
         text-decoration: none;
-        background-color:#fff;
-        color: #000;
+        background-color: #000;
+        border: .01em solid #fff;
+        color: #fff;
         padding: .35em 1em;
         border-radius: 27px;
         text-align: center;
@@ -819,8 +857,7 @@
     }
 
     .section3 .page-button a:hover {
-        opacity: 90%;
-        color:hsl(160, 51%, 60%);
+        color: hsl(160, 51%, 80%);
     }
 
 .section4 {
@@ -916,7 +953,7 @@
     font-size: 9.5vh;
     line-height: 80px;
     letter-spacing: .5px;
-    padding: 1em 0 .5em 0;
+    padding: 6vh 6vh 4vh 0;
     text-transform: uppercase;
     font-weight: 800;
     display: flex;
@@ -932,10 +969,10 @@
     grid-column: 2;
     grid-row: 2/3;
     font-size: 1.25rem;
-    padding: 3.5rem 3.5rem 3.5rem 0;
+    line-height: 6vh;
+    padding: 2em;
     color: rgb(62, 190, 147);
-    line-height: 1.75em;
-    font-weight: 100;
+    font-weight: 300;
     text-align: center;
     justify-self: center;
 }
@@ -955,8 +992,9 @@
 
 .section4 .page-button a {
     text-decoration: none;
-    background-color: #000;
-    color:white;;
+    background-color: #fff;
+    color: #000;
+    border: 0.01em solid #000;
     padding: .25em 1em;
     border-radius: 27px;
     text-align: center;
@@ -970,7 +1008,7 @@
 
 .section4 .page-button a:hover {
     opacity: 90%;
-    background-color:hsl(160, 51%, 80%)
+    background-color:hsl(160, 50%, 90%)
 }
 
 
@@ -1073,7 +1111,7 @@
     display: flex;
     align-self: center;
     justify-self: center;
-    padding: 1em 1em .5em 0;
+    padding:  6vh 6vh 4vh 0;
     color: #000;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
@@ -1083,10 +1121,10 @@
         grid-column: 2;
         grid-row: 2/3;
         font-size: 1.25rem;
+        line-height: 6vh;
         padding: 3.25rem 3.5rem 3rem 0;
         color: hsl(160, 51%, 60%);
-        line-height: 1.75;
-        font-weight: 100;
+        font-weight: 300;
         text-align: center;
         justify-self: center;
     }
@@ -1103,22 +1141,23 @@
     
     .section5 .page-button a {
         text-decoration: none;
-        background-color: #fff;
-        color: #000;
-        padding: .25em 1em;
+        background-color: #000;
+        color: #fff;
+        border: 0.01em solid #fff;
+        padding: .35em 1.5em;
         border-radius: 27px;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.35em;
         font-family: 'IBM Plex Sans', sans-serif;
         text-transform: uppercase;
         font-weight: 390;
-        margin-top: 6vh;
+        margin: 1em;
         transition: ease .5s ;
     }
 
     .section5 .page-button a:hover {
         opacity: 90%;
-        color: hsl(160, 100%, 80%);
+        color: hsl(160, 100%, 90%);
     }
 
 .section6 {
@@ -1175,8 +1214,8 @@
     font-size: 1.25rem;
     padding: 2.5em 3.5rem 1.5rem 3.5rem;
     color: hsl(160, 51%, 60%);
-    line-height: 1.75;
-    font-weight: 100;
+    line-height: 6vh;
+    font-weight: 300;
     text-align: center;
     justify-self: center;
 }
@@ -1192,17 +1231,15 @@
 
 .section6 .page-button a {
     text-decoration: none;
-    background-color:#fff;
-    color:#000;
+    background-color:#000;
+    color:#fff;
+    border: 0.01em solid #fff;
     padding: .25em 1em;
-    margin-left: 1em;
     border-radius: 27px;
-    margin-right: 4%;
     text-align: center;
     font-size: 1.5em;
     font-family: 'IBM Plex Sans', sans-serif;
-    margin-top: 3em;
-    margin-bottom: 1qem;;
+    margin: 1em;
     font-weight: 390;
     text-transform: uppercase;
     transition: ease .5s;
@@ -1294,7 +1331,7 @@
     box-shadow: 1px 1px 3px 5px #999;
     min-height: 80vh;
     grid-gap: 2.5vh;
-    box-shadow: 1px 1px 5px 3px magenta;
+    box-shadow: 1px 1px 5px 3px hsl(160, 100%, 90%);
     padding: 2rem;
     height: 80vh;
     border-radius: 25px;
@@ -1347,7 +1384,7 @@
 }
 
 #gram {
-    width: 10vh;
+    width: 8vh;
     margin-right: 5vh;
     transition: all 0.5s ease;
     margin-bottom: 0 !important;
@@ -1368,7 +1405,7 @@
 }
 
 .social .instagram #account:hover {
-    color: hsl(160, 100%, 80%);
+    opacity: 50%;
 }
 
 .social .youtube {
@@ -1386,7 +1423,7 @@
 }
 
 #tube {
-    width: 9vh;
+    width: 7vh;
     margin-right: 5vh;
     transition: all 0.5s ease;
     filter: opacity(0.5)
@@ -1407,10 +1444,8 @@
 }
 
 .social .youtube #account:hover {
-    color: hsl(300, 100%, 90%);
+    opacity: 50%;
 }
-
-
 
 .social button {
     padding: .5rem 1.25rem;
