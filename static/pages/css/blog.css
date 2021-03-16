@@ -156,7 +156,6 @@
     padding:2rem 1rem;
     background-color: white;
     border-radius: 25px;
-    z-index: 10000;
     margin-top: 5vh;
 }
 
@@ -165,7 +164,7 @@
     font-weight: 500;
     line-height: 3rem;
     color: #333;
-    margin: 1rem 0;
+    margin-bottom: 5vh;
 }
 
 .strip #smaller {
@@ -179,17 +178,25 @@
     justify-items: center;
 }
 
+.grid .single {
+    grid-template-rows: repeat(1, 1fr);
+}
+
 .theme {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 65vh;
+    min-height: 75vh;
     box-shadow: 1px 1px 5px 3px #333;
     margin-bottom: 5vh;
 }
 
 .theme h5 {
     font-size: 3.5vh;
+}
+
+.theme .downsize {
+    font-size: 3.15vh;
 }
 
 .theme #small {
@@ -203,6 +210,7 @@
 .description p {
     font-weight: 300;
     line-height: 4vh;
+    text-align: center;
 }
 
 .theme .click {
@@ -230,7 +238,7 @@
     transition: .3s;
     margin-top: 1rem;
     margin-left: .25rem;
-    transition: .5s;
+    transition: ease-in .7s;
 }
 
 .theme button a {
@@ -253,9 +261,10 @@
 
 .products h3 {
     font-size: 1.5rem;
+    font-weight: 400;
     line-height: 3rem;
     color: rgb(62, 190, 147);
-    margin: 1rem 0 0 1.5rem;
+    margin: 1rem 0 1.25rem 1.5rem;
     text-transform: uppercase;
     font-family:'IBM Plex Sans', sans-serif;
 }
@@ -293,6 +302,7 @@
     grid-column: 1/3;
     grid-row: 1;
     justify-self: center;
+    font-weight: 100;
 }
 
 .social .blog {
@@ -312,16 +322,19 @@
     grid-row: 3;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #gram {
-    width: 10vh;
+    width: 13.5vw;
 }
 
 .social .instagram #account {
-    font-size: .75rem;
+    font-size: 2.25vh;
+    cursor: pointer;
     align-self: center;
     text-shadow: none;
+    
 }
 
 .social .youtube {
@@ -329,17 +342,24 @@
     grid-row: 4;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 #tube {
-    width: 10vh;
+    width: 12.5vw;
 }
 
 
 .social .youtube #account {
-    font-size: .75rem;
+    font-size: 2.25vh;
     align-self: center;
     text-shadow: none;
+    cursor: pointer;
+    transition: all ease .7s;
+}
+
+.social .youtube #account:active {
+    filter: blur(.02em);
 }
 
 
@@ -364,9 +384,9 @@
     color: white;
 }
 
-.social button a:active {
-opacity: 50%;
-color: rgb(0, 255, 170);
+.social button:active {
+    opacity: 50%;
+    color: rgb(0, 255, 170);
 }
 
 .social #post {
