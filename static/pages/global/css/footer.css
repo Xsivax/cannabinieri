@@ -217,6 +217,10 @@ footer {
         display: none;
     }
 
+    #footer-languages {
+        display:none;
+    }
+
 }
 
 

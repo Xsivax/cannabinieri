@@ -1,0 +1,783 @@
+.global-wrapper {
+    width: 100%;
+}
+
+.page-wrapper {
+    display:grid;
+    width: 100%;
+}
+
+.info h1 {
+    color:#333;
+    font-family:'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    justify-self: center;
+    align-self: center;
+    padding-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info h1 span {
+    color: rgb(0, 255, 170);
+}
+
+.info p {
+    color: black;
+    text-align: center;
+
+}
+
+.info p span {
+    color: rgb(0, 255, 170);
+    font-weight: 600;
+}
+
+.info img {
+    width: 25vh;
+    height: auto;
+    align-self: center;
+}
+
+.strip h3 {
+    color: #333;
+    font-family:'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.theme h5 {
+  color: black;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.product .click button  {
+    margin: 0 1rem 0 0 !important;
+
+}
+
+#insta {
+    padding: 0;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 0;
+    margin-left: 0;
+    transition: .5s;
+}
+
+#gram {
+    width: 5vh;
+    margin: 0;
+}
+
+#you {
+    padding: 0;
+    background-color:transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 0;
+    margin-left: 0;
+    transition: .5s;
+}
+
+#tube {
+    width: 5vh;
+    margin: 0;
+}
+
+@media (max-width: 1023px) {
+   .page-wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "info"
+    "page-content";
+    width: 100%;
+   }
+
+   .info {
+    width:100%;
+    height: 77.5vh;
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1vh;
+}
+
+.info p {
+    font-size: 3vh;
+    margin: 1rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.info h1 {
+    font-size: 2.5rem;
+    padding-top: 3rem;
+}
+
+.info h1 span {
+    margin-left: 7vh;
+}
+
+.image {
+    display:flex;
+    justify-content: center;
+}
+
+.info img {
+    width: 30vh;
+    height: auto;
+    align-self: center;
+}
+
+
+.blog-container {
+    width: 100%;
+    grid-area: page-content;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #333;
+    display:flex;
+   flex-direction: column;
+}
+
+.strip {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: .95fr 1fr;
+    padding:2rem 1rem;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 5vh;
+}
+
+.strip h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #333;
+    margin-bottom: 5vh;
+}
+
+.strip #smaller {
+    font-size: 1.7rem;
+}
+
+.grid figure {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.grid .single {
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 75vh;
+    box-shadow: 1px 1px 5px 3px #333;
+    margin-bottom: 5vh;
+}
+
+.theme h5 {
+    font-size: 3.5vh;
+}
+
+.theme .downsize {
+    font-size: 3.15vh;
+}
+
+.theme #small {
+    font-size: 1.2rem;
+}
+
+.theme .description {
+    margin: 1rem;
+}
+
+.description p {
+    font-weight: 300;
+    line-height: 4vh;
+    text-align: center;
+}
+
+.theme .click {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.theme img {
+    width:40vh;
+    height: auto;
+    padding: 1rem 0 2rem 0;
+}
+
+.theme button {
+    padding: .5rem 1.25rem;
+    border: .02em solid #000;
+    font-size: 1.25rem;
+    font-family:'Lato', sans-serif;
+    line-height: 1rem;
+    border-radius: 25px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 1rem;
+    margin-left: .25rem;
+    transition: ease-in .7s;
+}
+
+.theme button a {
+    text-decoration: none;
+    color: #000;
+}
+
+.theme button:active {
+    background-color: hsl(160, 50%, 80%);
+    }
+
+.strip2 {
+    padding:.75rem;
+    background-color: white;
+    border-radius: 25px;
+    z-index: 10000;
+    margin-top: 3vh;
+    min-height: 90vh;
+}
+
+.products h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: rgb(62, 190, 147);
+    margin: 1rem 0 1.25rem 1.5rem;
+    text-transform: uppercase;
+    font-family:'IBM Plex Sans', sans-serif;
+}
+
+.products img {
+    width: 25vh;
+    margin: 0 0 1rem 3rem;
+}
+
+.products h5 {
+    color: black;
+    text-shadow: 1.5px 3px rgb(62, 190, 147);
+    font-size: 1.5rem;
+    font-family:'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.products p {
+    text-align: center;
+    margin: .75rem;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: .75fr .5fr .75fr .75fr;
+    align-items: center;
+    box-shadow: 1px 1px 5px 3px #999;
+    padding: 1rem;
+    min-height: 80vh;
+}
+
+.social h5 {
+    grid-column: 1/3;
+    grid-row: 1;
+    justify-self: center;
+    font-weight: 100;
+}
+
+.social .blog {
+    grid-column: 1/3;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social .blog #blog {
+    margin: 0;
+}
+
+.social .instagram {
+    grid-column: 1/3;
+    grid-row: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#gram {
+    width: 13.5vw;
+}
+
+.social .instagram #account {
+    font-size: 2.25vh;
+    cursor: pointer;
+    align-self: center;
+    text-shadow: none;
+    
+}
+
+.social .youtube {
+    grid-column: 1/3;
+    grid-row: 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#tube {
+    width: 12.5vw;
+}
+
+
+.social .youtube #account {
+    font-size: 2.25vh;
+    align-self: center;
+    text-shadow: none;
+    cursor: pointer;
+    transition: all ease .7s;
+}
+
+.social .youtube #account:active {
+    filter: blur(.02em);
+}
+
+
+.social button {
+    padding: .5rem 1.25rem;
+    background-color: black;
+    border: none;
+    font-size: 1.25rem;
+    font-family:'Fira Sans', sans-serif;
+    line-height: 1rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 1rem;
+    margin-left: .25rem;
+    transition: .5s;
+}
+
+.social button a {
+    text-decoration: none;
+    color: white;
+}
+
+.social button:active {
+    opacity: 50%;
+    color: rgb(0, 255, 170);
+}
+
+.social #post {
+    width: 40vh;
+}
+
+
+
+
+.desktop {
+    display:none;
+}
+
+#helper {
+    width: 45vh;
+}
+}
+
+@media (min-width:1024px){
+  
+    .page-wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "info"
+        "page-content";
+        width: 100%;
+    }
+
+    .info {
+        width:100%;
+        height: 63vh;
+        grid-area: info;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+    }
+
+    .info h1 {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 6rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-self: flex-start;
+        margin-left: 10rem;
+        
+    }
+
+    .info p {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 1.5rem;
+        margin: 0 1rem 1rem 12rem;
+        text-align: left;
+        line-height: 2.25rem;
+        letter-spacing: .5px;
+        font-weight: 300;
+    }
+
+    .info .image {
+        margin-left: 5vh;
+    }
+
+    .info img {
+        width: 45vh;
+        height: auto;
+        grid-column: 2;
+        grid-row: 1/3;
+        display:flex;
+        justify-self: center;
+        align-self: center;
+    }
+
+
+    .blog-container {
+        width: 100%;
+        grid-area: page-content;
+        padding:2rem;
+        overflow: hidden;
+        background-color: #333;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .strip {
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        min-height: 90vh;
+        width: 100%;
+        margin-top: 5vh;
+        padding: 2vh 5vw 7.5vh 5vw;
+    }
+
+    .strip h3 {
+        font-size: 3rem;
+        line-height: 3rem;
+        color: #333;
+        margin: 5vh 0;
+        padding-left: 5vh;
+    }
+
+    .strip .grid {
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 5vh;
+        width: 100%;
+    }
+
+    .grid figure {
+        grid-column: 1/5;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        padding: 0 1.5vw;
+    }
+
+    figure .theme {
+        max-width: 80%;
+        margin: 0 .5vw;
+    }
+
+    #shorter {
+        height: 60vh;
+        max-width: 90%;
+    }
+
+    #tech {
+        max-width: 100%;
+    }
+
+    #tutorials {
+        max-width: 100%;
+    }
+
+    .theme {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: 1px 1px 5px 3px #333;
+        width: 40vh;
+        height: 70vh;
+    }
+
+    .theme h5 {
+        font-size: 2.25rem;
+        text-align: center;
+    }
+
+    .theme .description {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    .theme .description p {
+        line-height: 4vh;
+        text-align: center;
+    }
+    
+    .theme .click {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .theme .image {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .theme img {
+        max-width: 90%;
+        height: auto;
+        padding: 1rem 0 2rem 0;
+    }
+    
+    .theme button {
+        padding: .55rem 1.25rem;
+        background-color: black;
+        border: none;
+        font-size: 1.25rem;
+        font-family:'Lato', sans-serif;
+        line-height: 1rem;
+        border-radius: 25px;
+        font-weight: 300;
+        cursor: pointer;
+        margin-top: 1rem;
+        margin-left: .25rem;
+        transition: .7s;
+    }
+    
+    .theme button a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .theme button:hover {
+        opacity: 50%;
+        background-color: rgb(62, 190, 147);
+    }
+    
+    .theme h3 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        color: #333 ;
+        margin: 5rem 0 2rem 1rem;
+    }
+
+    .theme span {
+        color: rgb(0, 255, 170);
+    }
+
+
+    .strip2 {
+        padding: 2rem 2rem 5rem 2rem;
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        margin-top: 3vh;
+        min-height: 90vh;
+    }
+    
+    .products h3 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 3rem;
+        color: rgb(62, 190, 147);
+        margin: 2.5rem 0 3rem 1.5rem;
+        text-transform: uppercase;
+        font-family:'IBM Plex Sans', sans-serif;
+        padding-left: 5vw;
+    }
+    
+    .products img {
+        width: 45vh;
+        margin-bottom: 3vh;
+    }
+    
+    .products p {
+        text-align: center;
+        margin: 1rem;
+    }
+    
+    .social {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: .5fr .5fr .5fr .5fr;
+        align-items: center;
+        box-shadow: 1px 1px 3px 5px #999;
+        padding: 0 0 2vh 2vw;
+        min-height: 80vh;
+        grid-gap: 2.5vh;
+        justify-items: center;
+    }
+
+   .social figure {
+       grid-column: 1/5;
+       grid-row: 2;
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       justify-content: center;
+       padding: 0 1.5vw;
+   }
+
+   .social figure img {
+       display: flex;
+       justify-self: center;
+       max-width: 90%;
+       margin: 0 .5vw;
+   }
+    
+    .social h5 {
+        grid-column: 1/3;
+        grid-row: 1;
+        justify-self: flex-start;
+        font-size: 5vh;
+        font-family:'IBM Plex Sans', sans-serif;
+        font-weight: 200;
+        text-transform: uppercase;
+        padding-left: 5vw;
+    }
+    
+    .social .blog {
+        grid-column: 1/3;
+        grid-row: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social .blog #blog {
+        margin: 0;
+        width: 20vh;
+        height: 5vh;
+        font-size: 1.75rem;
+    }
+    
+    .social .instagram {
+        grid-column: 1/3;
+        grid-row: 3;
+        display: flex;
+        padding-left: 2vh;
+    }
+    
+    #gram {
+        width: 4.5vw;
+        margin-right: 5vh;
+        transition: all ease .7s;
+    }
+
+    #gram:hover {
+        filter: opacity(.5);
+    }
+    
+    .social .instagram #account {
+        font-size: 1.75rem;
+        align-self: center;
+        text-shadow: none;
+        cursor: pointer;
+        transition: all ease .7s;
+    }
+
+    .social .instagram #account:hover {
+        filter: blur(.75px);
+        color: hsl(350, 100%, 90%);
+    }
+    
+    .social .youtube {
+        grid-column: 1/3;
+        grid-row: 4;
+        display: flex;
+        padding-left: 2vh;
+    }
+    
+    #tube {
+        width: 5.5vw;
+        margin-right: 5vh;
+        transition: all ease .7s;
+    }
+
+    #tube:hover {
+        filter: opacity(.5);
+    }
+    
+    
+    .social .youtube #account {
+        font-size: 1.75rem;
+        align-self: center;
+        text-shadow: none;
+        cursor: pointer;
+        transition: all ease .7s;
+    }
+
+    .social .youtube #account:hover {
+        filter: blur(.75px);
+        color: hsl(160, 50%, 70%);
+
+    }
+    
+    
+    .social button {
+        padding: .5rem 1.25rem;
+        background-color: black;
+        border: none;
+        font-size: 1.25rem;
+        font-family:'Fira Sans', sans-serif;
+        line-height: 1rem;
+        border-radius: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .3s;
+        margin-top: 1rem;
+        margin-left: .25rem;
+        transition: .5s;
+    }
+    
+    .social button a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .social button a:active {
+    opacity: 50%;
+    color: rgb(0, 255, 170);
+    }
+    
+    
+}

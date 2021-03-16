@@ -91,13 +91,18 @@ body {
  }
  
  .info p {
-    font-size: .95rem;
+    font-size: 3vh;
+    font-weight: 300;
     margin: 1rem;
     text-align: center;
  }
+
+ .info p span {
+    margin-top: 5vh;
+ }
  
  .info h1 {
-    font-size: 2.5rem;
+    font-size: 15vh;
  }
  
  .image {
@@ -142,6 +147,7 @@ body {
  
  .about h3 {
     font-size: 1.85rem;
+    font-weight: 300;
     line-height: 3rem;
     color: magenta;
     margin: 1rem 0;
@@ -149,6 +155,9 @@ body {
  
  
  .about p {
+    font-size: 2.5vh;
+    font-weight: 300;
+    line-height: 4.5vh;
     margin: 1rem 0;
  }
  
@@ -169,28 +178,12 @@ body {
  
  .products h3 {
     font-size: 1.5rem;
+    font-weight: 400;
     line-height: 3rem;
     color: rgb(62, 190, 147);
     margin: 1rem 0 0 1.5rem;
     text-transform: uppercase;
     font-family:'IBM Plex Sans', sans-serif;
- }
- 
- .products img {
-    width: 25vh;
-    margin: 1rem;
- }
- 
- .products h5 {
-    font-size: 1.25rem;
-    font-family:'IBM Plex Sans', sans-serif;
-    text-transform: uppercase;
-    margin-bottom: .5rem;
- }
- 
- .products p {
-    text-align: center;
-    margin: .75rem;
  }
  
  .product {
@@ -199,26 +192,44 @@ body {
     align-items: center;
     box-shadow: 1px 1px 1px 1px #999;
     border-radius: 25px;
-    padding: 1rem;
+    padding: 1rem .5rem;
  }
  
  .product .image {
     margin: 1rem 0;
  }
  
+ .product img {
+   max-width: 60vw;
+}
+
+.product h5 {
+   font-size: 1.25rem;
+   font-family:'IBM Plex Sans', sans-serif;
+   text-transform: uppercase;
+   margin: .5rem 0;
+}
+
+.product p {
+   font-weight: 300;
+   line-height: 4vh;
+   text-align: center;
+   margin: .75rem;
+}
+
  .product .click {
     margin: 1rem;
  }
  
  .product .click button {
     padding: .5rem 1.25rem;
-    background-color: black;
-    border: none;
+    background-color: #fff;
+    border: .02em solid hsl(300, 100%, 50%);
     font-size: 1.25rem;
-    font-family:'Fira Sans', sans-serif;
+    font-family:'Lato', sans-serif;
     line-height: 1rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
     transition: .3s;
     margin-top: 1rem;
@@ -228,12 +239,12 @@ body {
  
  .product .click button a {
     text-decoration: none;
-    color: white;
+    color: #333;
  }
  
  .product .click button:active {
- opacity: 50%;
- color: magenta;
+   opacity: 50%;
+   background-color: magenta;
  }
  
  #app {
@@ -382,6 +393,7 @@ body {
     
     .products h3 {
         font-size: 2.5rem;
+        font-weight: 300;
         line-height: 3rem;
         color: rgb(62, 190, 147);
         margin: 3rem 0 3rem 1.5rem;
@@ -390,9 +402,6 @@ body {
         padding-left: 1.5rem;
     }
     
-    .products img {
-        width: 50vh;
-    }
     
     .product h5 {
     font-size: 1.5rem;
@@ -410,25 +419,28 @@ body {
         display: grid;
         grid-template-columns: .25fr 1fr;
         grid-template-rows: .25fr .5fr .25fr;
+        grid-gap: 2rem;
         box-shadow: 3px 3px 3px 3px #eee;
         border-radius: 25px;
-        padding: 4rem;
+        padding: 4rem 1.5rem;
     }
  
     .product .image {
         grid-column: 1;
-        grid-row:1/3;
-        padding: 3vh;
-        margin: 1rem 0;
+        grid-row: 1/4;
         display: flex;
         align-items: center;
-        margin: 4rem 0 0 4rem;
+        justify-content: center;
     }
+
+    .product img {
+      max-width: 40vw;
+  }
  
     .product h5 {
         grid-column: 2;
         grid-row: 1;
-        font-size: 3rem;
+        font-size: 4.75vh;
         display:flex;
         justify-self: center;
         align-self: flex-end;
@@ -447,6 +459,7 @@ body {
         grid-row: 2;
         padding: 0 2.5rem;
         font-size: 1.15rem;
+        line-height: 5vh;
     }
  
     .product .click {
@@ -461,14 +474,14 @@ body {
     
     .product .click button  {
         padding: .75rem 1.5rem;
-        background-color: black;
-        border: none;
+        background-color: #fff;
+        border: .02em solid hsl(300, 100%, 50%);
         font-size: 1.5rem;
         color: white;
         font-family:'Fira Sans', sans-serif;
         line-height: 1rem;
         border-radius: 25px;
-        font-weight: 600;
+        font-weight: 300;
         cursor: pointer;
         transition: .3s;
         margin-top: 1rem;
@@ -476,8 +489,9 @@ body {
     }
  
     .product .click button a {
-        color: white;
+        color: #333;
         text-decoration: none;
+        text-transform: uppercase;
     }
     
     .product .click button:hover {
