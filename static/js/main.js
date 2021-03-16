@@ -76,38 +76,33 @@ function display() {
                                 }
                             }
 
-//some desperate try
-
-
-function shit(){
-    var Image_Id = document.getElementsById('getImage');
-    if (Image_Id.src.match("static/img/sample-sauvage.svg" )) {
-        Image_Id.src = "static/img/sample-flower.svg";
-    }
-    else
-    Image_Id.src= "static/img/sample-sauvage.svg";
-}
-
-
 //print pdf file
 
-const pdfBtn = document.getElementById('tube');
+// const pdfBtn = document.getElementById('print');
 
-console.log(pdfBtn);
+// console.log(pdfBtn);
 
-const printPage = () => {
-    window.print();
-}
+// const printPage = () => {
+//     window.print();
+// }
 
-pdfBtn.addEventListener("click", (event) => {
-printPage(event, 'printed');
+// pdfBtn.addEventListener("click", (event) => {
+// printPage(event, 'printed');
     
-});
+// });
 
-let screen = () => {
-    console.log(window.innerHeight);
-    console.log(window.innerWidth);
-};
+// let screen = () => {
+//     console.log(window.innerHeight);
+//     console.log(window.innerWidth);
+// };
 
-screen();
+// screen();
 
+window.addEventListener('load', () => {
+    document.getElementById('print').addEventListener('click', () => {
+        let page = this.document.querySelector('.wrapper');
+        console.log(page);
+        console.log(window);
+    
+    })
+}, false);

@@ -88,7 +88,7 @@
     margin: 0;
 }
 
-@media (max-width:480px) {
+@media (max-width: 1023px) {
    .page-wrapper {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
@@ -108,9 +108,10 @@
 }
 
 .info p {
-    font-size: .95rem;
+    font-size: 3vh;
     margin: 1rem;
     text-align: center;
+    font-weight: 300;
 }
 
 .info h1 {
@@ -161,6 +162,7 @@
 
 .strip h3 {
     font-size: 2rem;
+    font-weight: 500;
     line-height: 3rem;
     color: #333;
     margin: 1rem 0;
@@ -170,15 +172,24 @@
     font-size: 1.7rem;
 }
 
+.grid figure {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+}
+
 .theme {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    min-height: 65vh;
     box-shadow: 1px 1px 5px 3px #333;
     margin-bottom: 5vh;
 }
 
 .theme h5 {
-    font-size: 1.25rem;
+    font-size: 3.5vh;
 }
 
 .theme #small {
@@ -187,6 +198,11 @@
 
 .theme .description {
     margin: 1rem;
+}
+
+.description p {
+    font-weight: 300;
+    line-height: 4vh;
 }
 
 .theme .click {
@@ -204,13 +220,12 @@
 
 .theme button {
     padding: .5rem 1.25rem;
-    background-color: black;
-    border: none;
+    border: .02em solid #000;
     font-size: 1.25rem;
-    font-family:'Fira Sans', sans-serif;
+    font-family:'Lato', sans-serif;
     line-height: 1rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
     transition: .3s;
     margin-top: 1rem;
@@ -220,12 +235,11 @@
 
 .theme button a {
     text-decoration: none;
-    color: white;
+    color: #000;
 }
 
-.theme button a:active {
-    opacity: 50%;
-    color: rgb(62, 190, 147);
+.theme button:active {
+    background-color: hsl(160, 50%, 80%);
     }
 
 .strip2 {
@@ -371,7 +385,7 @@ color: rgb(0, 255, 170);
 }
 }
 
-@media (min-width:768px){
+@media (min-width:1024px){
   
     .page-wrapper {
         grid-template-columns: 100%;
@@ -410,6 +424,7 @@ color: rgb(0, 255, 170);
         text-align: left;
         line-height: 2.25rem;
         letter-spacing: .5px;
+        font-weight: 300;
     }
 
     .info .image {
@@ -435,6 +450,7 @@ color: rgb(0, 255, 170);
         background-color: #333;
         display:flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .strip {
@@ -442,7 +458,9 @@ color: rgb(0, 255, 170);
         border-radius: 25px;
         z-index: 10000;
         min-height: 90vh;
+        width: 100%;
         margin-top: 5vh;
+        padding: 2vh 5vw 7.5vh 5vw;
     }
 
     .strip h3 {
@@ -458,28 +476,39 @@ color: rgb(0, 255, 170);
         grid-template-columns: repeat(3,1fr);
         grid-gap: 5vh;
         width: 100%;
-        padding-left: 10vh;
     }
 
-    .grid #post1 {
-        grid-column: 1;
+    .grid figure {
+        grid-column: 1/5;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        padding: 0 1.5vw;
     }
 
-    .grid #post2 {
-        grid-column: 2;
-    }
-
-    .grid #post3 {
-        grid-column: 3;
+    figure .theme {
+        max-width: 80%;
+        margin: 0 .5vw;
     }
 
     #shorter {
         height: 60vh;
+        max-width: 90%;
+    }
+
+    #tech {
+        max-width: 100%;
+    }
+
+    #tutorials {
+        max-width: 100%;
     }
 
     .theme {
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
         box-shadow: 1px 1px 5px 3px #333;
         width: 40vh;
         height: 70vh;
@@ -491,7 +520,14 @@ color: rgb(0, 255, 170);
     }
 
     .theme .description {
+        display: flex;
+        justify-content: center;
         margin: 1rem;
+    }
+
+    .theme .description p {
+        line-height: 4vh;
+        text-align: center;
     }
     
     .theme .click {
@@ -508,25 +544,24 @@ color: rgb(0, 255, 170);
     }
     
     .theme img {
-        width: 35vh;
+        max-width: 90%;
         height: auto;
         padding: 1rem 0 2rem 0;
     }
     
     .theme button {
-        padding: .5rem 1.25rem;
+        padding: .55rem 1.25rem;
         background-color: black;
         border: none;
         font-size: 1.25rem;
-        font-family:'Fira Sans', sans-serif;
+        font-family:'Lato', sans-serif;
         line-height: 1rem;
         border-radius: 25px;
-        font-weight: 600;
+        font-weight: 300;
         cursor: pointer;
-        transition: .3s;
         margin-top: 1rem;
         margin-left: .25rem;
-        transition: .5s;
+        transition: .7s;
     }
     
     .theme button a {
@@ -534,12 +569,11 @@ color: rgb(0, 255, 170);
         color: white;
     }
     
-    .theme button a:active {
+    .theme button:hover {
         opacity: 50%;
-        color: rgb(62, 190, 147);
-        }
+        background-color: rgb(62, 190, 147);
+    }
     
-
     .theme h3 {
         font-size: 2.5rem;
         line-height: 3rem;
@@ -553,7 +587,7 @@ color: rgb(0, 255, 170);
 
 
     .strip2 {
-        padding: 2rem 2rem 5rem 2cd rem;
+        padding: 2rem 2rem 5rem 2rem;
         background-color: white;
         border-radius: 25px;
         z-index: 10000;
@@ -563,18 +597,19 @@ color: rgb(0, 255, 170);
     
     .products h3 {
         font-size: 2.5rem;
+        font-weight: 300;
         line-height: 3rem;
         color: rgb(62, 190, 147);
         margin: 2.5rem 0 3rem 1.5rem;
         text-transform: uppercase;
         font-family:'IBM Plex Sans', sans-serif;
+        padding-left: 5vw;
     }
     
     .products img {
         width: 45vh;
         margin-bottom: 3vh;
     }
-    
     
     .products p {
         text-align: center;
@@ -587,28 +622,27 @@ color: rgb(0, 255, 170);
         grid-template-rows: .5fr .5fr .5fr .5fr;
         align-items: center;
         box-shadow: 1px 1px 3px 5px #999;
-        padding-left: 2rem;
+        padding-left: 2vw;
         min-height: 80vh;
         grid-gap: 2.5vh;
+        justify-items: center;
     }
 
-    #post_1 {
-    
-        grid-column: 1;
-        grid-row: 2;
-    }
+   .social figure {
+       grid-column: 1/5;
+       grid-row: 2;
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       justify-content: center;
+       padding: 0 1.5vw;
+   }
 
-    #post_2 {
-    
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    #post_3 {
-    
-        grid-column: 3;
-        grid-row: 2;
-    }
+   .social figure img {
+       display: flex;
+       justify-self: center;
+       max-width: 90%;
+       margin: 0 .5vw;
+   }
     
     .social h5 {
         grid-column: 1/3;
@@ -616,8 +650,9 @@ color: rgb(0, 255, 170);
         justify-self: flex-start;
         font-size: 5vh;
         font-family:'IBM Plex Sans', sans-serif;
+        font-weight: 200;
         text-transform: uppercase;
-
+        padding-left: 5vw;
     }
     
     .social .blog {
@@ -645,12 +680,24 @@ color: rgb(0, 255, 170);
     #gram {
         width: 10vh;
         margin-right: 5vh;
+        transition: all ease .7s;
+    }
+
+    #gram:hover {
+        filter: opacity(.5);
     }
     
     .social .instagram #account {
         font-size: 1.75rem;
         align-self: center;
         text-shadow: none;
+        cursor: pointer;
+        transition: all ease .7s;
+    }
+
+    .social .instagram #account:hover {
+        filter: blur(.75px);
+        color: hsl(350, 100%, 90%);
     }
     
     .social .youtube {
@@ -663,6 +710,11 @@ color: rgb(0, 255, 170);
     #tube {
         width: 10vh;
         margin-right: 5vh;
+        transition: all ease .7s;
+    }
+
+    #tube:hover {
+        filter: opacity(.5);
     }
     
     
@@ -670,6 +722,14 @@ color: rgb(0, 255, 170);
         font-size: 1.75rem;
         align-self: center;
         text-shadow: none;
+        cursor: pointer;
+        transition: all ease .7s;
+    }
+
+    .social .youtube #account:hover {
+        filter: blur(.75px);
+        color: hsl(160, 50%, 70%);
+
     }
     
     

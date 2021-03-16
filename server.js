@@ -1,9 +1,11 @@
 
-var http = require('http');
+const http = require('http');
 const fs = require('fs');
 var url = require('url');
 var path = require('path');
 var StringDecoder = require('string_decoder').StringDecoder;
+
+const PORT = 8080;
 
 var mimeTypes = {
      "html": "text/html",
@@ -67,12 +69,13 @@ function readform() {
 
      
      
-http.createServer((request, response)=>{
+http.createServer((request, response) => {
     var pathname = url.parse(request.url).pathname;
     var filename;
     if(pathname === "/"){
         filename = "index.html";
     }
+
     else{
         filename = path.join(process.cwd(), pathname);
     }
@@ -122,6 +125,9 @@ http.createServer((request, response)=>{
         }
         
     }
+
+    //send response 
+
     catch(e) {
             console.log('File not exists: ' + filename);
             
@@ -134,7 +140,9 @@ http.createServer((request, response)=>{
     return;
     }
     
-).listen(5000);
+).listen(PORT, () => {
+    console.log('Server listening on' , PORT);
+});
 
 
 // const axios = require("axios");

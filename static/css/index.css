@@ -338,6 +338,7 @@
         #row2 p {
             text-align: center;
             padding-top:2%;
+            cursor: pointer;
         }
 
         .arrow .down {

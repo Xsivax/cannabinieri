@@ -138,7 +138,6 @@ body {
     padding:.75rem;
     background-color: white;
     border-radius: 25px;
-    z-index: 10000;
 }
 .strip .about {
     grid-column: 1;

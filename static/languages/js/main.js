@@ -1,4 +1,6 @@
-// this functio shows an element by id
+
+  
+// this function shows an element by id
 
 function show() {
     var x= document.getElementById("information");
@@ -11,7 +13,7 @@ function show() {
 //this function shows element2 by id -to be generalized
 
 function display() {
-    var x= document.getElementById("links");
+    var x= document.getElementById("footer-links");
     if (x.style.display === "none") {
         x.style.display = "flex";}
         else {
@@ -73,8 +75,34 @@ function display() {
                                     x.style.display ="none";
                                 }
                             }
-function hide() {
-    document.getElementById("name").style.visibility="hidden"; //not working yet
-}
 
+//print pdf file
+
+// const pdfBtn = document.getElementById('print');
+
+// console.log(pdfBtn);
+
+// const printPage = () => {
+//     window.print();
+// }
+
+// pdfBtn.addEventListener("click", (event) => {
+// printPage(event, 'printed');
     
+// });
+
+// let screen = () => {
+//     console.log(window.innerHeight);
+//     console.log(window.innerWidth);
+// };
+
+// screen();
+
+window.addEventListener('load', () => {
+    document.getElementById('print').addEventListener('click', () => {
+        let page = this.document.querySelector('.wrapper');
+        console.log(page);
+        console.log(window);
+    
+    })
+}, false);
