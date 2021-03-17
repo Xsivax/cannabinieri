@@ -72,6 +72,7 @@ body {
 
 
 @media (max-width:480px) {
+
    .page-wrapper {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
@@ -88,25 +89,36 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 1vh;
+    padding-top: 10vh;
 }
 
 .info p {
-    font-size: .95rem;
+    font-size: 1.1rem;
+    font-weight: 300;
     margin: 1rem;
     text-align: center;
+    line-height: 4vh;
+}
+
+.info p span {
+    font-size: 1.2rem;
 }
 
 .info h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 400;
+    padding: 0;
+    margin-bottom: 1.25rem;
 }
 
 .image {
     display:flex;
     justify-content: center;
+    min-height: 35vh;
 }
 
 .info img {
-    width: 35vh;
+    max-width: 70vw;
     height: auto;
     align-self: center;
     margin-top: 0;
@@ -131,11 +143,11 @@ body {
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: .95fr 1fr;
-    padding:.75rem;
+    padding: 2rem .75rem 2rem .75rem;
     background-color: white;
     border-radius: 25px;
-    z-index: 10000;
 }
+
 .strip .about {
     grid-column: 1;
     grid-row: 1;
@@ -143,14 +155,21 @@ body {
 
 .about h3 {
     font-size: 2rem;
+    font-weight: 400;
     line-height: 3rem;
+    text-align: center;
     color: rgb(191, 255, 0);
-    margin: 1rem 0;
 }
 
-
 .about p {
-    margin: 1rem 0;
+    text-align: center;
+    font-weight: 300;
+    line-height: 4.5vh;
+    margin: 1rem .75rem;
+}
+
+.about p span {
+    font-size: 1.2rem;
 }
 
 .about img {
@@ -169,27 +188,33 @@ body {
 }
 
 .products h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 300;
     line-height: 3rem;
     color: rgb(62, 190, 147);
-    margin: 1rem 0 0 1.5rem;
+    margin: 1rem 0 .75rem 1.5rem;
     text-transform: uppercase;
     font-family:'IBM Plex Sans', sans-serif;
 }
 
 .products img {
-    width: 20vh;
+    max-width: 45vw;
     margin: 1rem;
 }
 
 .products h5 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 300;
     font-family:'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
     margin-bottom: .5rem;
 }
 
 .products p {
+    display: flex;
+    flex-direction: column;
+    line-height: 4vh;
+    font-weight: 300;
     text-align: center;
     margin: .75rem;
 }
@@ -203,25 +228,20 @@ body {
     padding: 1rem;
 }
 
-.product .image {
-    margin: 1rem 0;
-}
-
 .product .click {
     margin: 1rem;
 }
 
 .product .click button {
     padding: .5rem 1.25rem;
-    background-color: black;
-    border: none;
+    background-color: #fff;
+    border: .01em solid #000;
     font-size: 1.25rem;
-    font-family:'Fira Sans', sans-serif;
+    font-family:'Lato', sans-serif;
     line-height: 1rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
-    transition: .3s;
     margin-top: 1rem;
     margin-left: .25rem;
     transition: .5s;
@@ -229,7 +249,7 @@ body {
 
 .product .click button a {
     text-decoration: none;
-    color: white;
+    color: #333;
 }
 
 .product .click button a:active {
@@ -265,8 +285,9 @@ color: rgb(0, 255, 170);
         height: 65vh;
         grid-area: info;
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: 60% 40%;
         grid-template-rows: repeat(2, 50%);
+        padding-top: 1.5vh;
     }
 
     .info h1 {
@@ -275,31 +296,40 @@ color: rgb(0, 255, 170);
         font-size: 6rem;
         margin-bottom: 0;
         display: flex;
-        justify-self: flex-start;
-        margin-left: 5rem;
+        justify-self: center;
+        align-self: center;
         
     }
 
     .info p {
         grid-column: 1;
         grid-row: 2;
-        font-size: 1.25rem;
-        margin: 0 1rem 1rem 10rem;
-        text-align: left;
-        line-height: 2.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: flex-start;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 5rem;
         letter-spacing: .5px;
+    }
+
+    .info p span {
+        font-size: 1.65rem;
+    }
+
+    .info .image {
+        grid-column: 2;
+        grid-row: 1/3;
     }
 
     .info img {
         width: 50vh;
         height: auto;
-        grid-column: 2;
-        grid-row: 1/3;
         display:flex;
         justify-self: center;
         align-self: center;
         margin-top: 8vh;
-        margin-left: 4vh;
     }
 
 
@@ -317,7 +347,6 @@ color: rgb(0, 255, 170);
         padding:2.5rem 0 0 2.5rem;
         background-color: white;
         border-radius: 25px;
-        z-index: 10000;
         min-height: 90vh;
     }
 
@@ -325,10 +354,12 @@ color: rgb(0, 255, 170);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: .2fr 1fr;
+        padding-bottom: 5vh;
     }
 
     .about h3 {
         font-size: 2.5rem;
+        font-weight: 400;
         line-height: 3rem;
         color:rgb(191, 255, 0);
         margin: 2rem 0 2rem 1rem;
@@ -343,6 +374,7 @@ color: rgb(0, 255, 170);
         margin: 1rem 0 0 1rem;
         float: left;
         font-size: 1.5rem;
+        line-height: 5.25vh;
     }
 
     .about .image {
@@ -355,7 +387,7 @@ color: rgb(0, 255, 170);
 
     
     .about img {
-        width:55vh;
+        max-width: 35vw;
         height: auto;
         margin-top: 10vh;
     }
@@ -372,7 +404,9 @@ color: rgb(0, 255, 170);
     
     .products h3 {
         font-size: 2.5rem;
+        font-weight: 300;
         line-height: 3rem;
+        letter-spacing: .1em;
         color: rgb(62, 190, 147);
         margin: 3rem 0 3rem 1.5rem;
         text-transform: uppercase;
@@ -385,10 +419,11 @@ color: rgb(0, 255, 170);
     }
     
     .product h5 {
-    font-size: 1.5rem;
-    font-family:'IBM Plex Sans', sans-serif;
-    text-transform: uppercase;
-    margin-bottom: .5rem;
+        font-size: 1.5rem;
+        font-family:'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: .5rem;
+        padding-top: 4.5vh;
     }
     
     .products p {
@@ -402,22 +437,24 @@ color: rgb(0, 255, 170);
         grid-template-rows: .25fr .5fr .25fr;
         box-shadow: 3px 3px 3px 3px #eee;
         border-radius: 25px;
+        padding: 2vh 1vw 5vh 1vw;
     }
 
     .product .image {
         grid-column: 1;
-        grid-row:1/3;
-        padding: 3vh;
+        grid-row:1/4;
+        padding: 3vh 3vw;
         margin: 1rem 0;
         display: flex;
         align-items: center;
-        margin: 4rem 0 0 4rem;
+        border-right: .1em solid #999;
     }
 
     .product h5 {
         grid-column: 2;
         grid-row: 1;
         font-size: 3rem;
+        font-weight: 300;
         display:flex;
         justify-self: center;
         align-self: flex-end;
@@ -434,8 +471,13 @@ color: rgb(0, 255, 170);
         align-self: center;
         grid-column: 2;
         grid-row: 2;
+        line-height: 4vh;
         padding: 0 2.5rem;
         font-size: 1.15rem;
+    }
+
+    .product p a {
+        color: #999;
     }
 
     .product .click {
@@ -450,22 +492,21 @@ color: rgb(0, 255, 170);
     
     .product .click button  {
         padding: .75rem 1.5rem;
-        background-color: black;
-        border: none;
+        background-color: #fff;
+        border: .01em solid #000;
         font-size: 1.5rem;
-        color: white;
-        font-family:'Fira Sans', sans-serif;
+        font-family:'Lato', sans-serif;
         line-height: 1rem;
         border-radius: 25px;
-        font-weight: 600;
+        font-weight: 300;
         cursor: pointer;
-        transition: .3s;
         margin-top: 1rem;
         margin-left: .25rem;
+        transition: .3s;
     }
 
     .product .click button a {
-        color: white;
+        color: #333;
         text-decoration: none;
     }
     
