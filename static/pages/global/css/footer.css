@@ -500,7 +500,11 @@ footer {
     }
 
         #row3 .languages a:active {
-                                color:  rgb(0, 255, 170);
-                            }
+            color:  rgb(0, 255, 170);
+        }
+
+    .desktop {
+        display: none;
+    }
 
     }     
