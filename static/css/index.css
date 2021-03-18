@@ -469,11 +469,10 @@
 
 .section1 #product {
     grid-column: 2;
-    grid-row: 2/3;
+    grid-row: 1/5;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #product a {
@@ -481,8 +480,8 @@
 }
 
 #product img {
-   height: 50vh;
-   cursor: pointer;
+   min-height: 50vh;
+   opacity: 85%;
 }
 
 
@@ -495,6 +494,7 @@
     align-items: center;
     margin-top:0;
     z-index: -1;
+    width: 120vw;
 }
 
 .section1 #image #leaves {

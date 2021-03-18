@@ -236,8 +236,8 @@ margin-top:6em;
     }
                     
     .hamburger {
-        padding: 0 0 0 50vw;
-        display:block;
+        padding: 0 0 0 55vw;
+        display: flex;
         cursor:pointer;
         transition: all .2s ease;
     }
@@ -326,7 +326,7 @@ margin-top:6em;
                         
 .drop {
     display: flex;
-    justify-self: center;
+    justify-content: center;
     align-self: center;
 }
                         
