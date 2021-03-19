@@ -1,3 +1,14 @@
+:root {
+    --gradient: linear-gradient(
+        45deg,
+        hsl(160, 51%, 49%), 
+        hsl(160, 51%, 59%), 
+        hsl(160, 51%, 79%),
+        hsl(160, 51%, 89%),
+        #fff
+    );
+}
+
 .global-wrapper {
     width: 100%;
 }
@@ -27,13 +38,6 @@
     font-weight: 600;
 }
 
-.info img {
-    width: 25vh;
-    height: auto;
-    align-self: center;
-    margin-top: 5vh;
-}
-
 .about p span {
     color: rgb(0, 255, 170);
     font-weight: 400;
@@ -59,17 +63,21 @@
     grid-area: info;
     display: flex;
     flex-direction: column;
-    margin: 0 1vh;
+    padding-top: 10vh;
 }
 
 .info p {
-    font-size: .95rem;
-    margin: 1rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 2rem 1rem 1rem 1rem;
     text-align: center;
 }
 
 .info h1 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
+    font-weight: 300;
+    padding-top: 0;
+    margin-bottom: 0;
 }
 
 .image {
@@ -100,25 +108,28 @@
 }
 
 .strip {
+    display: grid;
     height: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: .95fr 1fr;
-    padding:.75rem;
+    grid-template-rows: 1fr;
+    padding: 1rem 1.25rem;
     background-color: white;
     border-radius: 25px;
-    z-index: 10000;
 }
 
 .strip .about {
     grid-column: 1;
     grid-row: 1;
+    padding-top: 6.5vh;
 }
 
 .about h3 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+    font-weight: 300;
     line-height: 3rem;
     color: #333;
-    margin: 1rem 0;
+    letter-spacing: .01em;
+    padding: 1vh 2vw;
 }
 
 .about h3 span {
@@ -126,7 +137,17 @@
 }
 
 .about p {
-    margin: 1rem 0;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 4vh;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.about p span {
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: .02em
 }
 
 .about img {
@@ -145,32 +166,44 @@
 }
 
 .products h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 300;
     line-height: 3rem;
     color: rgb(62, 190, 147);
-    margin: 1rem 0 0 1.5rem;
+    margin: 1.25rem 0 .75rem 1.5rem;
     text-transform: uppercase;
     font-family:'IBM Plex Sans', sans-serif;
 }
 
 .products img {
-    width: 25vh;
-    margin-bottom: 1rem;
+    max-height: 30vh;
+    margin: 1.25rem 0 2rem 0;
 }
 
 .products h5 {
     color: black;
-    text-shadow: 1.5px 3px rgb(62, 190, 147);
-    font-size: 1.5rem;
+    text-shadow: .05em .025em hsl(160, 49%, 40%);
+    font-size: 1.85rem;
     font-family:'IBM Plex Sans', sans-serif;
+    font-weight: 200;
     text-transform: uppercase;
     margin-bottom: .5rem;
+    padding-top: 1vh;
 }
 
 .products p {
+    font-weight: 300;
+    line-height: 4vh;
     text-align: center;
     margin: .75rem;
+    padding-top: 2vh;
 }
+
+.products p span {
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+} 
 
 .product {
     display: flex;
@@ -178,33 +211,39 @@
     align-items: center;
     box-shadow: 1px 1px 1px 1px #999;
     border-radius: 25px;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.product .click {
+    padding-top: 1vh;
 }
 
 .product .click button {
     padding: .5rem 1.25rem;
-    background-color: black;
+    background-image: var(--gradient);
+    background-size: 300%;
     border: none;
     font-size: 1.25rem;
-    font-family:'Fira Sans', sans-serif;
+    font-family:'Lato', sans-serif;
     line-height: 1rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
     transition: .3s;
     margin-top: 1rem;
     margin-left: .25rem;
-    transition: .5s;
 }
 
 .product .click button a {
     text-decoration: none;
     color: white;
+    transition: .5s;
 }
 
 .product .click button a:active {
-opacity: 50%;
-color: rgb(0, 255, 170);
+    -webkit-text-stroke-width: .05em;
+        -webkit-text-stroke-color: hsl(300, 100%, 95% );
+        filter: blur(.015em) 
 }
 
 #shop {
@@ -243,38 +282,49 @@ color: rgb(0, 255, 170);
         display: grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(2, 50%);
+        padding-left: 2vw;
     }
 
     .info h1 {
         grid-column: 1;
         grid-row: 1;
-        font-size: 6rem;
+        font-size: 7rem;
+        font-weight: 300;
         margin-bottom: 0;
         display: flex;
-        justify-self: flex-start;
-        margin-left: 10rem;
-        
+        justify-self: center; 
+        padding-top: 5vh;
     }
 
     .info p {
         grid-column: 1;
         grid-row: 2;
-        font-size: 1.25rem;
-        margin: 0 1rem 1rem 10rem;
-        text-align: left;
-        line-height: 2.25rem;
-        letter-spacing: .5px;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: flex-start;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 5rem;
+        letter-spacing: .05em;
     }
 
-    .info img {
-        width: 40vh;
-        height: auto;
+    .info p span {
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+
+    .info .image {
         grid-column: 2;
         grid-row: 1/3;
         display:flex;
-        justify-self: center;
+        justify-self: flex-start;
         align-self: center;
-        margin-left: 4.5rem;
+        padding-left: 5vw;
+    }
+
+    .info img {
+       max-height: 45vh;
     }
 
 
@@ -289,7 +339,7 @@ color: rgb(0, 255, 170);
     }
 
     .strip {
-        padding:2.5rem 0 0 2.5rem;
+        padding: 2.5rem 2.5rem 2.5rem 3rem;
         background-color: white;
         border-radius: 25px;
         z-index: 10000;
@@ -303,10 +353,14 @@ color: rgb(0, 255, 170);
     }
 
     .about h3 {
-        font-size: 2.5rem;
-        line-height: 3rem;
+        grid-column: 1/3;
+        grid-row: 1;
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 4rem;
+        letter-spacing: .05em;
         color: #333 ;
-        margin: 5rem 0 2rem 1rem;
+        margin: 5rem 0 2rem  0;
     }
 
     .about span {
@@ -314,9 +368,23 @@ color: rgb(0, 255, 170);
     }
     
     .about p {
-        margin: 1rem 0 0 1rem;
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        line-height: 5vh;
+        margin: 1rem 0 0 0;
         float: left;
-        font-size: 1.5rem;
+        text-align: center;
+        font-size: 1.55rem;
+    }
+
+    .about p span {
+        color: rgb(0, 255, 170);
+        font-weight: 400;
+        padding-top: 4vh;
+        letter-spacing: .03em;
+        font-size: 1.6rem
     }
 
     .about .image {
@@ -325,13 +393,13 @@ color: rgb(0, 255, 170);
         display:flex;
         justify-content: center;
         align-items: center;
+        padding-top: 10vh;
     }
 
     
     .about img {
-        width:55vh;
+        max-width: 35vw;
         height: auto;
-        margin-top: 10vh;
     }
 
     .strip2 {
@@ -344,7 +412,8 @@ color: rgb(0, 255, 170);
     }
     
     .products h3 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
+        font-weight: 300;
         line-height: 3rem;
         color: rgb(62, 190, 147);
         margin: 2.5rem 0 3rem 1.5rem;
@@ -353,36 +422,40 @@ color: rgb(0, 255, 170);
     }
     
     .products img {
-        width: 45vh;
-        margin-bottom: 3vh;
+        max-width: 45vh;
     }
     
     .product h5 {
     color: black;
-    text-shadow: 1.5px 3px rgb(62, 190, 147);
-    font-size: 1.5rem;
+    text-shadow: .05em .025em hsl(160, 49%, 40%);
+    font-size: 1.65rem;
     font-family:'IBM Plex Sans', sans-serif;
+    font-weight: 200;
     text-transform: uppercase;
     margin-bottom: .5rem;
     }
     
     .products p {
         text-align: center;
-        margin: 1rem;
     }
     
     .product {
         display: grid;
-        grid-template-columns: .25fr 1fr;
+        grid-template-columns: .5fr 1fr;
         grid-template-rows: .25fr .5fr .25fr;
         box-shadow: 3px 3px 3px 3px #eee;
         border-radius: 25px;
         margin: 1rem;
+        min-height: 70vh;
+        padding-left: 5vw;
     }
 
     .product .image {
         grid-column: 1;
-        grid-row:1/3;
+        grid-row:1/4;
+        display: flex;
+        align-items: center;
+        border-right: .1em solid #eee;
     }
 
     .product h5 {
@@ -403,6 +476,14 @@ color: rgb(0, 255, 170);
         grid-row: 2;
         padding: 0 2.5rem;
         font-size: 1.15rem;
+        line-height: 5vh;
+        margin-top: .5vh;
+    }
+
+    .product p span {
+        font-weight: 400;
+        letter-spacing: .03em;
+        padding-top: 2vh;
     }
 
     .product .click {
@@ -417,11 +498,12 @@ color: rgb(0, 255, 170);
     
     .product .click button  {
         padding: .75rem 1.5rem;
-        background-color: black;
+        background-image: var(--gradient);
+        background-size: 300%;
         border: none;
         font-size: 1.5rem;
         color: white;
-        font-family:'Fira Sans', sans-serif;
+        font-family:'Lato', sans-serif;
         line-height: 1rem;
         border-radius: 25px;
         font-weight: 600;
@@ -436,9 +518,12 @@ color: rgb(0, 255, 170);
         text-decoration: none;
     }
     
-    .product .click button:hover {
-        opacity: 50%;
-        background-color: rgb(62, 190, 147);
+    .product .click button a:active,
+    .product .click button a:focus, 
+    .product .click button a:hover {
+        -webkit-text-stroke-width: .05em;
+        -webkit-text-stroke-color: hsl(300, 100%, 90% );
+        filter: blur(.015em) 
     }
     
     #shop {

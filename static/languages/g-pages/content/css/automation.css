@@ -26,6 +26,7 @@ body {
 .info h1 {
     color:#333;
     font-family:'IBM Plex Sans', sans-serif;
+    font-weight: 300;
     text-transform: uppercase;
     justify-self: center;
     align-self: center;
@@ -146,6 +147,7 @@ body {
 
 .about h3 {
     font-size: 2rem;
+    font-weight: 300;
     line-height: 3.5rem;
     color:rgb(0, 255, 170);
     margin: 1rem 0;
@@ -308,7 +310,7 @@ body {
         font-size: 3.5vh;
         margin: 0 1rem 1rem 5rem;
         text-align: left;
-        line-height: 2.25rem;
+        line-height: 3rem;
         letter-spacing: .5px;
         justify-self: center;
         font-weight: 300;
@@ -359,9 +361,10 @@ body {
 
     .about h3 {
         font-size: 2.5rem;
+        font-weight: 300;
         line-height: 3rem;
         color:rgb(0, 255, 170);
-        margin: 5rem 0 2rem 1rem;
+        margin: 4rem 0 2rem 1rem;
     }
 
     .about span {

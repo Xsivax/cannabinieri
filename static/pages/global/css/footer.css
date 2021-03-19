@@ -303,6 +303,7 @@ footer {
         }
 
         #column2 ul li p a {
+            font-weight: 300;
             text-decoration: none;
             color:white;
             letter-spacing: .075em
@@ -392,8 +393,10 @@ footer {
     }
 
     #column3 ul li p a {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
         text-decoration:none;
-        color:white;
+        color: #fff;
     }
 
     #column3 ul li p a:active {

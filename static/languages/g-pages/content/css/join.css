@@ -34,7 +34,7 @@
 
 .info p span {
     color: rgb(62, 190, 147);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 
@@ -72,17 +72,21 @@
     display: flex;
     flex-direction: column;
     margin: 0 1vh;
+    padding-top: 6vh;
 }
 
 .info p {
-    font-size: .95rem;
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: #333;
     margin: 1rem;
     text-align: center;
     margin-top: .5rem;
 }
 
 .info h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 300;
 }
 
 .image {
@@ -113,12 +117,12 @@
 
 .strip {
     height: auto;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .95fr 1fr;
+    grid-template-rows: 1fr;
     padding:.75rem;
     background-color: white;
     border-radius: 25px;
-    z-index: 10000;
 }
 
 .strip .about {
@@ -128,14 +132,19 @@
 
 .about h3 {
     font-size: 2rem;
+    font-weight: 300;
     line-height: 3rem;
+    text-align: center;
     color:rgb(62, 190, 147);
-    margin: 1rem 0;
+    margin: 2rem 0 1rem 0;
 }
 
 
 .about p {
-    margin: 1rem 0;
+    font-weight: 300;
+    line-height: 4vh;
+    text-align: center;
+    margin: 1.5rem 0 1rem 0;
 }
 
 .about img {
@@ -156,20 +165,19 @@
 }
 
 form .btn {
-    padding: .75rem 1rem;
-    background-color: black;
+    padding: .75rem 1.5rem;
+    background-color: #000;
     border: none;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: white;
-    font-family:'Fira Sans', sans-serif;
+    font-family:'Lato', sans-serif;
     line-height: 1rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
-    transition: .3s;
     margin-top: 1rem;
     margin-left: .25rem;
-    
+    transition: ease.5s;
 }
 
 .btn:active{
@@ -186,6 +194,8 @@ form .btn {
 .adress-info h3 {
     color: rgb(62, 190, 147);
     font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2vh 0 3vh 0;
 }
 
 .phone-info {
@@ -240,7 +250,7 @@ form .btn {
     .info h1 {
         grid-column: 1;
         grid-row: 1;
-        font-size: 5rem;
+        font-size: 6rem;
         font-weight: 300;
         font-family:'IBM Plex Sans', sans-serif;
         text-transform: uppercase;
@@ -527,7 +537,7 @@ form h3 {
     font-weight: 200;
     font-size: 2.5rem;
     line-height: 5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 form .input-container {
@@ -583,6 +593,7 @@ form .input-container {
 
 
 @media (max-width: 480px){
+
     .page-wrapper {
         grid-template-columns: 100%;
         grid-template-rows: auto auto;
@@ -603,18 +614,85 @@ form .input-container {
     .contact-container .form {
         height: auto;
         grid-template-columns: 1fr;
-        grid-template-rows: .85fr 1fr;
+        grid-template-rows: .6fr 1fr;
     }
     .contact-info {
         grid-row: 2;
     }
 
+    .adress-info h5 {
+        color: #eee;
+        font-size: 1.15rem;
+        font-weight: 300;
+        letter-spacing: .115em;
+        text-transform: uppercase;
+        padding: 5vh 0 0 0;
+    }
+
+    .adress-info p {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.05rem;
+        font-weight: 300;
+        line-height: 5vh;
+        letter-spacing: 0.02em;
+        padding: 2vh 0 1vh 1vw;
+    }
+
+
+.phone-info h3 {
+    color: rgb(62, 190, 147);
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2vh 0 3vh 0;
+}
+
+.phone-info p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 5vh;
+    letter-spacing: 0.02em;
+    padding: 0 0 1vh 0;
+}
+
+.social-info h3 {
+    color: rgb(62, 190, 147);
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2vh 0 3vh 0;
+}
+
+.social-info figure {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+figure h5 {
+    color: #eee;
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: .115em;
+    text-transform: uppercase;
+    padding: 5vh 0 0 0;
+}
+
+figure a {
+    color: #eee;
+    font-size: 1.05rem;
+    font-weight: 300;
+    text-decoration: none;
+}
     .contact-form {
         grid-row: 1;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
     form {
-        padding: .75rem;
+        padding: .75rem .65rem 1.5rem .75rem;
     }
 
     form h3 {
@@ -623,7 +701,7 @@ form .input-container {
     }
 
     form .input-container {
-        margin: .5rem 0;
+        margin: 1.2rem 0;
     }
 
     .input-container .input{
