@@ -72,17 +72,28 @@ body {
     grid-area: info;
     display: flex;
     flex-direction: column;
-    margin: 0 1vh;
+    padding-top: 10vh;
 }
 
 .info p {
-    font-size: .95rem;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 3.5vh;
     margin: 1rem;
     text-align: center;
 }
 
+.info p span {
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+}
+
 .info h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+    padding-top: 2vh;
 }
 
 .image {
@@ -91,7 +102,7 @@ body {
 }
 
 .info img {
-    width: 37.5vh;
+    min-width: 60vw;
     height: auto;
     align-self: center;
     margin-top: 0;
@@ -116,10 +127,9 @@ body {
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: .95fr 1fr;
-    padding:.75rem;
+    padding: .75rem .95rem;
     background-color: white;
     border-radius: 25px;
-    z-index: 10000;
 }
 .strip .about {
     grid-column: 1;
@@ -128,14 +138,24 @@ body {
 
 .about h3 {
     font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
     line-height: 3rem;
     color:rgb(0, 255, 170);
-    margin: 1rem 0;
+    margin: 1rem .5rem;
 }
 
-
 .about p {
-    margin: 1rem 0;
+    font-weight: 300;
+    font-size: .95rem;
+    line-height: 5vh;
+    text-align: center;
+    margin: 1rem .5rem;
+}
+
+.about p span {
+    font-size: 1.1rem;
+    letter-spacing: .03em;
 }
 
 .about img {
@@ -154,10 +174,12 @@ body {
 }
 
 .products h3 {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
+    font-weight: 300;
+    letter-spacing: .04em;
     line-height: 3rem;
     color: rgb(62, 190, 147);
-    margin: 1rem 0 0 1.5rem;
+    margin: 1rem 0 1rem 1.5rem;
     text-transform: uppercase;
     font-family:'IBM Plex Sans', sans-serif;
 }
@@ -165,16 +187,23 @@ body {
 .products img {
     width: 20vh;
     margin: 1rem;
+    opacity: 0;
 }
 
 .products h5 {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
+    font-weight: 200;
     font-family:'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
+    letter-spacing: .01em;
     margin-bottom: .5rem;
+    padding-top: 2vh;
 }
 
 .products p {
+    font-weight: 300;
+    font-size: .95rem;
+    line-height: 5vh;
     text-align: center;
     margin: .75rem;
 }
@@ -194,17 +223,20 @@ body {
     margin: 1rem 0;
 }
 
+.product .click {
+    padding: 2vh 0;
+}
+
 .product .click button {
     padding: .5rem 1.25rem;
-    background-color: black;
-    border: none;
+    background-color: #fff;
+    border: .01em solid #000;
     font-size: 1.25rem;
-    font-family:'Fira Sans', sans-serif;
+    font-family:'Lato', sans-serif;
     line-height: 1rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
-    transition: .3s;
     margin-top: 1rem;
     margin-left: .25rem;
     transition: .5s;
@@ -212,7 +244,7 @@ body {
 
 .product .click button a {
     text-decoration: none;
-    color: white;
+    color: #333;
 }
 
 .product .click button a:active {
@@ -253,41 +285,52 @@ color: rgb(0, 255, 170);
         display: grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(2, 50%);
+        padding-left: 5vw;
     }
 
     .info h1 {
         grid-column: 1;
         grid-row: 1;
-        font-size: 6rem;
+        font-size: 6.25rem;
+        font-weight: 300;
+        letter-spacing: .04em;
         margin-bottom: 0;
         display: flex;
-        justify-self: flex-start;
-        margin-left: 10rem;
-        
+        justify-self: center;
+        padding-top: 7.5vh;
     }
 
     .info p {
         grid-column: 1;
         grid-row: 2;
-        font-size: 1.25rem;
-        margin: 0 1rem 1rem 10rem;
-        text-align: left;
-        line-height: 2.25rem;
-        letter-spacing: .5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.35rem;
+        margin: 0 1rem 1rem 1rem;
+        text-align: center;
+        line-height: 4rem;
+        letter-spacing: .03em;
     }
 
-    .info img {
-        width: 60vh;
-        height: auto;
+    .info p span {
+        font-size: 1.45rem;
+        font-weight: 400;
+    }
+
+    .info .image {
         grid-column: 2;
         grid-row: 1/3;
         display:flex;
-        justify-self: center;
+        justify-self: flex-start;
         align-self: center;
-        margin-top: 3vh;
-        margin-left: 1vh;
     }
 
+    .info img {
+        min-width: 35vw;
+        margin: 0;
+    }
 
     .app-container {
         width: 100%;
@@ -315,6 +358,7 @@ color: rgb(0, 255, 170);
 
     .about h3 {
         font-size: 2.5rem;
+        font-weight: 300;
         line-height: 3rem;
         color:rgb(0, 255, 170);
         margin: 5rem 0 2rem 1rem;
@@ -325,9 +369,16 @@ color: rgb(0, 255, 170);
     }
     
     .about p {
-        margin: 1rem 0 0 1rem;
-        float: left;
+        margin: 1rem 1rem 0 1rem;
+        text-align: left;
+        font-size: 1.35rem;
+        font-weight: 300;
+        line-height: 5vh;
+    }
+
+    .about p span {
         font-size: 1.5rem;
+        letter-spacing: .04em;
     }
 
     .about .image {
@@ -356,6 +407,7 @@ color: rgb(0, 255, 170);
     
     .products h3 {
         font-size: 2.5rem;
+        font-weight: 300;
         line-height: 3rem;
         color: rgb(62, 190, 147);
         margin: 3rem 0 3rem 1.5rem;
@@ -366,13 +418,16 @@ color: rgb(0, 255, 170);
     
     .products img {
         width: 35vh;
+        opacity: 0;
     }
     
     .product h5 {
-    font-size: 1.5rem;
-    font-family:'IBM Plex Sans', sans-serif;
-    text-transform: uppercase;
-    margin-bottom: .5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-family:'IBM Plex Sans', sans-serif;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        margin-bottom: .5rem;
     }
     
     .products p {
@@ -422,6 +477,10 @@ color: rgb(0, 255, 170);
         grid-row: 2;
         padding: 0 2.5rem;
         font-size: 1.15rem;
+        font-weight: 300;
+        line-height: 5vh;
+        letter-spacing: .02em;
+
     }
 
     .product .click {
@@ -436,14 +495,14 @@ color: rgb(0, 255, 170);
     
     .product .click button  {
         padding: .75rem 1.5rem;
-        background-color: black;
-        border: none;
+        background-color: #fff;
+        border: .01em solid #000;
         font-size: 1.5rem;
         color: white;
-        font-family:'Fira Sans', sans-serif;
+        font-family:'Lato', sans-serif;
         line-height: 1rem;
         border-radius: 25px;
-        font-weight: 600;
+        font-weight: 300;
         cursor: pointer;
         transition: .3s;
         margin-top: 1rem;
@@ -451,7 +510,7 @@ color: rgb(0, 255, 170);
     }
 
     .product .click button a {
-        color: white;
+        color: #333;
         text-decoration: none;
     }
     

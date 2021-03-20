@@ -1,0 +1,768 @@
+:root {
+    --space : 5px;
+}
+
+.page-wrapper {
+    display:grid;
+}
+
+.title{
+    margin-top: var(--space);
+}
+
+
+#about {
+margin-top: var(--space);
+background-color:white;
+}
+
+#about p {
+    color:black;
+}
+
+#app-link .image img {
+    box-shadow: 1px 1px 3px 5px #eee;
+    border-radius: 25px;
+    padding: 1.5rem;
+}
+
+@media screen and (min-width:1024px) {
+    
+    .page-wrapper {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto;
+    }
+
+    .title {
+        grid-column: 1/5;
+        grid-row:1;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 67vh;
+        padding-left: 5.75vh;
+    }
+
+    .title  #heading {
+        grid-column: 1;
+        grid-row: 1/2;
+        display: flex;
+        padding-top: 1vh;
+    }
+
+    .title  #heading #two {
+        color: rgb(62, 190, 147);
+        padding-top: 1.65em;
+    }
+
+    .title .short {
+        grid-column: 1;
+        grid-row: 1/2;
+        font-family:'IBM Plex Sans', sans-serif;
+        font-size: 1.75em;
+        color: rgb(100,190, 149);
+        margin-left:.1em;
+        text-align: center;
+        align-self: flex-end;
+        letter-spacing: .03em;
+        line-height: 2em;
+        padding-bottom: 13.5vh;
+    }
+
+
+    .title .image img {
+      max-width: 30vw;
+    }
+
+    .title .image {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        transition: 0.4s;
+        grid-column: 2;
+        grid-row: 1/2;
+        padding-bottom: 7.5vh;
+    }
+
+    h1 {
+        font-size: 5.85rem;
+        font-weight: 300;
+        line-height: 80px;
+        letter-spacing: .01em;
+        padding-top: 1.15em;
+        margin-left: .1em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+    }
+
+    #about {
+        grid-column:1/5;
+        grid-row: 2;
+        display: flex;
+        background-color: white;
+        margin: 0 5rem 2rem 5rem;
+        border-radius: 25px;
+        box-shadow: .01em .01em .01em .05em hsl(160, 51%, 49%);
+    }
+
+
+    #about p {
+        font-size:1.5rem;
+        font-weight: 300;
+        padding:1.5rem;
+        text-align: center;
+        font-family: 'IBM Plex Sans', sans-serif;
+        line-height: 3;
+        letter-spacing: 0.02em;
+    }
+
+    #links {
+        grid-column:1/5;
+        grid-row:3;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        margin-top: 2.5vh;
+        min-height: 75vh;
+    }
+
+    #app-link {
+        display:grid;
+        grid-template-columns: 45% 65%;
+        grid-template-rows: 20% 40% 20% ;
+        box-shadow: 1px 1px 1px 3px hsl(160, 100%, 50%);
+        border-radius: 25px;
+        min-height: 90vh;
+        padding-top: 1.5rem;
+    }
+
+    #app-link .image {
+        grid-column:1 ;
+        grid-row:1/4;
+        display:flex;
+        align-items: center;
+        justify-content:center
+    }
+
+    #app-link .image img {
+        height: 35vh;
+        width: 20vw;
+        
+    }
+
+    #app-link .description {
+        grid-column:2 ;
+        grid-row:1/3;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 2em 1em 1em 1em;
+    }
+
+    #app-link .description h3 {
+        font-size: 6.25em;
+        font-weight: 300;
+        letter-spacing: .04em;
+        color: hsl(160, 100%, 50%);
+        margin-bottom: .25em;
+        margin-top: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    #app-link .description h3 span {
+        color: #333;
+    }
+
+    #app-link .description p {
+        font-size: 1.3em;
+        color: #333;
+        line-height: 2;
+        justify-self: flex-end;
+        padding-top: 1rem;
+        text-align: center;
+        width: 60vh;
+    }
+
+    .description ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.25em;
+        color: #333;
+        line-height: 2;
+        margin-top: 2rem;
+        padding-left: 15vw;
+    }
+
+    #app-link .page-button {
+        grid-column: 2 ;
+        grid-row:4;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0 2.75rem 0;
+    }
+
+    #app-link .page-button a {
+        text-decoration: none;
+        background-color:#fff;
+        color: #000;
+        padding: .25em 1em;
+        border: .01em solid #000;
+        border-radius: 27px;
+        margin-right: 20vw;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        font-weight: 300;
+        transition: all ease .5s;
+    }
+
+    #app-link .page-button a:hover {
+        background-color: hsl(160, 100%, 75%);
+    }
+
+    #lab-link {
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 40% 20% ;
+        box-shadow: 1px 1px 1px 3px hsl(75, 100%, 50%);
+        border-radius: 25px;
+        min-height: 80vh;
+        padding-top: 1.5rem;
+        margin-top: 10vh;
+    }
+
+    #lab-link .image {
+        grid-column: 2;
+        grid-row:1/3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 85vh;
+        padding-top: 7.5vh;
+    }
+
+    #lab-link .image img {
+       height: 60vh;
+       width: auto;
+    }
+
+    #lab-link .description {
+        grid-column:1 ;
+        grid-row:1/3;
+        display:flex;
+        flex-direction: column;
+        margin-left: 5rem;
+        padding:1em;
+        height: 60vh;
+    }
+
+    #lab-link .description h3 {
+        font-size: 6.25em;
+        font-weight: 300;
+        letter-spacing: .04em;
+        color:hsl(75, 100%, 50%);
+        margin-bottom: .25em;
+        margin-top: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    #lab-link .description h3 span {
+        color:#333;
+    }
+
+    #lab-link .description p {
+        font-size: 1.3em;
+        color: #333;
+        line-height: 2;
+        text-align: center;
+        justify-self: flex-end;
+        padding-top: 2rem;
+    }
+
+    #lab-link .page-button {
+        grid-column:1 ;
+        grid-row: 4;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 3rem 0;
+    }
+
+    #lab-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: .01em solid #000;
+        padding: .25em 1em;
+        margin-left: 5vw;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 300;
+        font-family: 'lato', sans-serif;
+        margin-top:.75em;
+        text-transform: uppercase;
+        transition: all ease .5s;
+    }
+
+        #lab-link .page-button a:hover {
+            background-color: hsl(75, 100%, 75%);
+        }
+
+    #about-link {
+        display:grid;
+        grid-template-columns: 35% 75%;
+        grid-template-rows: 20% 40% 20% ;
+        box-shadow: 1px 1px 1px 3px hsl(300, 100%, 50%);
+        border-radius: 25px;
+        min-height: 70vh;
+        padding: 2rem 0 2rem 0;
+        margin-top: 10vh;
+    }
+
+    #about-link .image {
+        grid-column:1 ;
+        grid-row:1/3;
+        display: flex;
+        align-items: center;
+        margin: 12.5vh 0 0 5vh;
+    }
+
+    #about-link .image #question {
+        margin-top:0;
+        font-size: 30em;
+        font-weight: 300;
+        color:hsl(300, 100%, 50%);
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding-top: 0;
+    }
+
+    #about-link .description {
+        grid-column:2/5 ;
+        grid-row:1/2;
+    }
+
+    #about-link .description h3 {
+        font-size: 6.25em;
+        font-weight: 300;
+        letter-spacing: .04em;
+        color: #333;
+        margin-bottom: .25em;
+        margin-top: .5em;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    #about-link h3 span {
+        color:hsl(300, 100%, 50%);
+    }
+
+    #about-link .description p {
+        font-size: 1.25em;
+        color: #333;
+        line-height: 2;
+        justify-self: flex-end;
+        width: 80vh;
+        padding-top: 1.25rem;
+    }
+
+    #about-link .description p span {
+        color:hsl(300, 100%, 50%);
+    }
+
+    #about-link a {
+        text-decoration: none;
+    }
+
+    #about-link .page-button {
+        grid-column: 2;
+        grid-row:4;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #about-link .page-button a {
+        text-decoration: none;
+        background-color:#fff;
+        color: #000;
+        padding: .25em 1em;
+        border: .01em solid #000;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1.5em;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        transition: all ease .5s;
+        font-weight: 300;
+        margin-left: 15vw;
+    }
+
+    #about-link .page-button a:hover {
+        background-color: hsl(300, 100%, 75%);
+    }
+
+    #footer-wrapper {
+        margin-top:.5rem;
+    }
+
+    .discover {
+        display:none;
+    }
+
+    #app-link .image #icon {
+        display:none;
+    }
+}
+
+@media only screen and (max-width:1023px) {
+
+    .page-wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto ;
+    }
+
+    .title {
+        grid-column: 1;
+        grid-row:1/2;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: flex-start;
+        height: 80vh;
+        padding-top: 4.25rem;
+    }
+
+    .title .short {
+        font-family:'IBM Plex Sans', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        padding: 1em 2em;
+        color: rgb(62, 190, 147);
+        margin-left:.1em;
+        text-align: center;
+        letter-spacing: 0.01em;
+        line-height: 5vh;
+    }
+
+    .title .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .title .image img {
+        max-width: 70vw; 
+    }
+    
+    h1 {
+        font-size: 2.75rem;
+        font-weight: 300;
+        line-height: 60px;
+        letter-spacing: .04em;
+        margin-left: .1em;
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+    }
+
+    #two {
+        color: hsl(160, 51%, 49%);
+        padding-left: 2rem;
+    }
+
+    #about {
+        grid-column:1;
+        grid-row: 2;
+        background-color: white;
+        display: flex;
+        margin:2rem 1rem;
+        margin-top:0;
+        border-radius: 25px;
+        box-shadow: .01em .01em .01em .04em hsl(160, 51%, 49%);
+        padding:1rem;
+    }
+
+    #about p {
+        font-size:1.125rem;
+        font-weight: 300;
+        line-height: 2;
+        color: #333;
+        text-align: center;
+    }
+
+    #links {
+        grid-column:1;
+        grid-row:3;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        margin-top: 2.5vh;
+        min-height: 90vh;
+    }
+
+    #app-link {
+        display:grid;
+        grid-template-rows: repeat(2, .7fr);
+        padding-bottom: 1.5rem;
+        box-shadow: 1px 1px 1px 3px hsl(160, 100%, 50%);
+        border-radius: 25px;
+    }
+
+    #app-link .image {
+        grid-row: 1;
+        padding-top: 2em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #app-link .image img {
+      height: 20vh;
+      width: auto;
+    }
+
+    #app-link .description {
+        grid-row: 2;
+        padding:.25em 1em 1em 1em;
+    }
+
+    #app-link .description h3 {
+        font-size: 2.75rem;
+        font-weight: 200;
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: .04em;
+        padding-top: 3vh;
+    }
+
+    #app-link .description h3 span {
+        color: hsl(160, 100%, 50%);
+    }
+
+    #app-link .description p {
+        font-size: .95rem;
+        font-weight: 300;
+        color: #333;
+        text-align: center;
+        line-height: 2;
+    }
+
+    #app-link .page-button{
+        display:flex;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    #app-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: .01em solid #000;
+        padding: .35em 1em;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        margin: .75em;
+        text-transform: uppercase;
+        transition: all ease .2s;
+    }
+
+    #app-link .page-button a:active {
+        border-color:hsl(160, 100%, 75%);
+    }
+
+
+    #lab-link {
+        display:grid;
+        grid-template-rows: repeat(2, .7fr);
+        padding-bottom: 1.5rem;
+        box-shadow: 1px 1px 1px 3px hsl(75, 100%, 50%);
+        border-radius: 25px;
+        margin-top: 10vh;
+        max-height: 105vh;
+    }
+
+    #lab-link .image {
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        padding-top: 2em;
+    }
+
+    #lab-link .image img {
+       height: 25vh;
+       width: auto;
+    }
+
+    #lab-link .description {
+        grid-row: 2;
+        padding:.5em 2em 3em 2em;
+    }
+
+
+    #lab-link .description h3 {
+        font-size: 2.75rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: .04em;
+        padding-top: 3vh;
+    }
+
+    #lab-link .description h3 span {
+        color: hsl(75, 100%, 50%);
+    }
+
+    #lab-link .description p {
+        font-size: .95em;
+        font-weight: 300;
+        color: #333;
+        text-align: center;
+        line-height: 2;
+    }
+
+    #lab-link .page-button{
+        display:flex;
+        justify-content: center;
+    }
+
+    #lab-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: .01em solid #000;
+        padding: .35em 1em;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        margin: .75em;
+        text-transform: uppercase;
+        transition: all ease .2s;
+    }
+
+    #lab-link .page-button a:active {
+        border-color:hsl(75, 100%, 75%);
+    }
+
+    #about-link {
+        display:grid;
+        grid-template-rows: repeat(2, .7fr);
+        grid-template-columns: 100%;
+        padding-bottom: 1.5rem;
+        box-shadow: 1px 1px 1px 3px hsl(300, 100%, 50%);
+        border-radius: 25px;
+        margin-top: 10vh;
+        max-height: 90vh;
+        padding-top: 5vh;
+    }
+
+    #about-link a {
+        text-decoration: none;
+    }
+
+    #about-link .image {
+       grid-row: 1/2; 
+       grid-column: 1;
+    }
+
+    #about-link .image #question {
+        margin-top:.35em;
+        font-size: 30vh;
+        color: hsl(300, 100%, 50%);
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding-left: 2vh;
+    }
+
+    #about-link .description {
+        grid-row: 1/2;
+        grid-column: 1;
+        padding: 1em;
+    }
+
+
+    #about-link .description h3 {
+        font-size: 2.75rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 15vh;
+    }
+
+    #about-link .description h3 span {
+        color: hsl(300, 100%, 50%);
+    }
+
+    #about-link .description p {
+        font-size: .95rem;
+        font-weight: 300;
+        color: #333;
+        text-align: center;
+        line-height: 2;
+        margin-top: 2rem;
+    }
+
+    #about-link .description p span {
+        color:hsl(300, 100%, 50%);
+    }
+
+    #about-link .page-button{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        grid-row: 2;
+    }
+
+    #about-link .page-button a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        border: .01em solid #000;
+        padding: .35em 1.5em;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 1em;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        margin: 1em;
+        text-transform: uppercase;
+        transition: all ease .2s;
+    }
+
+    #about-link .page-button a:active {
+        border-color:hsl(300, 100%, 75%);
+    }
+
+    #footer-wrapper {
+        margin-top:.5rem;
+    }
+
+    .description .additional {
+        display: none;
+    }
+
+    #app-link .image #icon-desktop {
+        display:none;
+    }
+
+
+}

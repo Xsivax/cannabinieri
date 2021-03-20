@@ -52,27 +52,26 @@ background-color:white;
 
     .title  #heading #two {
         color: rgb(62, 190, 147);
-        padding-top: 1.25em;
+        padding-top: 1.65em;
     }
 
     .title .short {
         grid-column: 1;
         grid-row: 1/2;
         font-family:'IBM Plex Sans', sans-serif;
-        font-size:1.5em;
-        padding: 1.75em 1em;
+        font-size: 1.75em;
         color: rgb(100,190, 149);
         margin-left:.1em;
         text-align: center;
         align-self: flex-end;
-        padding-bottom: 25vh;
+        letter-spacing: .03em;
+        line-height: 2em;
+        padding-bottom: 13.5vh;
     }
 
 
     .title .image img {
-        height: 50vh;
-        width: auto;
-        padding: 5vh 5vh 10vh 5vh;
+      max-width: 30vw;
     }
 
     .title .image {
@@ -83,13 +82,15 @@ background-color:white;
         transition: 0.4s;
         grid-column: 2;
         grid-row: 1/2;
+        padding-bottom: 7.5vh;
     }
 
     h1 {
-        font-size: 5.75rem;
+        font-size: 5.85rem;
+        font-weight: 300;
         line-height: 80px;
-        letter-spacing: .5px;
-        padding-top: 1em;
+        letter-spacing: .01em;
+        padding-top: 1.15em;
         margin-left: .1em;
         font-family: 'IBM Plex Sans', sans-serif;
         text-transform: uppercase;
@@ -102,16 +103,18 @@ background-color:white;
         background-color: white;
         margin: 0 5rem 2rem 5rem;
         border-radius: 25px;
-        box-shadow: 1px 1px 1px 5px hsl(160, 51%, 49%);
+        box-shadow: .01em .01em .01em .05em hsl(160, 51%, 49%);
     }
 
 
     #about p {
         font-size:1.5rem;
+        font-weight: 300;
         padding:1.5rem;
-        text-align: left;
+        text-align: center;
         font-family: 'IBM Plex Sans', sans-serif;
-        line-height: 2;
+        line-height: 3;
+        letter-spacing: 0.02em;
     }
 
     #links {
@@ -131,7 +134,7 @@ background-color:white;
         grid-template-rows: 20% 40% 20% ;
         box-shadow: 1px 1px 1px 3px hsl(160, 100%, 50%);
         border-radius: 25px;
-        height: 90vh;
+        min-height: 90vh;
         padding-top: 1.5rem;
     }
 
@@ -144,8 +147,9 @@ background-color:white;
     }
 
     #app-link .image img {
-        height: 40vh;
-        width:auto;
+        height: 35vh;
+        width: 20vw;
+        
     }
 
     #app-link .description {
@@ -154,12 +158,13 @@ background-color:white;
         display: flex;
         flex-direction: column;
         align-self: center;
-        padding:1em;
-        height: 60vh;
+        padding: 2em 1em 1em 1em;
     }
 
     #app-link .description h3 {
-        font-size:6em;
+        font-size: 6.25em;
+        font-weight: 300;
+        letter-spacing: .04em;
         color: hsl(160, 100%, 50%);
         margin-bottom: .25em;
         margin-top: .5em;
@@ -171,9 +176,9 @@ background-color:white;
     }
 
     #app-link .description p {
-        font-size: 1.25em;
+        font-size: 1.3em;
         color: #333;
-        line-height: 1.5;
+        line-height: 2;
         justify-self: flex-end;
         padding-top: 1rem;
         text-align: center;
@@ -181,11 +186,14 @@ background-color:white;
     }
 
     .description ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         font-size: 1.25em;
         color: #333;
-        line-height: 1.6;
+        line-height: 2;
         margin-top: 2rem;
-        padding-left: 2rem;
+        padding-left: 15vw;
     }
 
     #app-link .page-button {
@@ -193,9 +201,8 @@ background-color:white;
         grid-row:4;
         display:flex;
         align-items: center;
-        justify-content: flex-end;
-        padding: 0 0 2.75rem 2.5rem;
-        margin-right: 30vh;
+        justify-content: center;
+        padding: 2rem 0 2.75rem 0;
     }
 
     #app-link .page-button a {
@@ -203,16 +210,15 @@ background-color:white;
         background-color:#fff;
         color: #000;
         padding: .25em 1em;
-        margin-left: .5em;
-        border: 1px solid #000;
+        border: .01em solid #000;
         border-radius: 27px;
-        margin-right: 4%;
+        margin-right: 20vw;
         text-align: center;
-        font-size: 2em;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 1.5em;
+        font-family: 'Lato', sans-serif;
         text-transform: uppercase;
+        font-weight: 300;
         transition: all ease .5s;
-        font-weight: 400;
     }
 
     #app-link .page-button a:hover {
@@ -225,7 +231,7 @@ background-color:white;
         grid-template-rows: 20% 40% 20% ;
         box-shadow: 1px 1px 1px 3px hsl(75, 100%, 50%);
         border-radius: 25px;
-        height: 80vh;
+        min-height: 80vh;
         padding-top: 1.5rem;
         margin-top: 10vh;
     }
@@ -237,7 +243,8 @@ background-color:white;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 90vh;
+        min-height: 85vh;
+        padding-top: 7.5vh;
     }
 
     #lab-link .image img {
@@ -256,7 +263,9 @@ background-color:white;
     }
 
     #lab-link .description h3 {
-        font-size: 6em;
+        font-size: 6.25em;
+        font-weight: 300;
+        letter-spacing: .04em;
         color:hsl(75, 100%, 50%);
         margin-bottom: .25em;
         margin-top: .5em;
@@ -268,11 +277,12 @@ background-color:white;
     }
 
     #lab-link .description p {
-        font-size: 1.25em;
+        font-size: 1.3em;
         color: #333;
-        line-height: 1.5;
+        line-height: 2;
+        text-align: center;
         justify-self: flex-end;
-        padding-top: 1rem;
+        padding-top: 2rem;
     }
 
     #lab-link .page-button {
@@ -280,22 +290,22 @@ background-color:white;
         grid-row: 4;
         display:flex;
         align-items: center;
-        justify-content: flex-end;
-        padding: 0 1rem 3rem 0;
+        justify-content: center;
+        padding: 0 0 3rem 0;
     }
 
     #lab-link .page-button a {
         text-decoration: none;
         background-color: #fff;
         color: #000;
-        border: 1px solid #000;
+        border: .01em solid #000;
         padding: .25em 1em;
-        margin-left: 0;
+        margin-left: 5vw;
         border-radius: 27px;
-        margin-right: 4%;
         text-align: center;
-        font-size: 1.8em;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 1.5em;
+        font-weight: 300;
+        font-family: 'lato', sans-serif;
         margin-top:.75em;
         text-transform: uppercase;
         transition: all ease .5s;
@@ -311,8 +321,8 @@ background-color:white;
         grid-template-rows: 20% 40% 20% ;
         box-shadow: 1px 1px 1px 3px hsl(300, 100%, 50%);
         border-radius: 25px;
-        height: 70vh;
-        padding-top: 1.5rem;
+        min-height: 70vh;
+        padding: 2rem 0 2rem 0;
         margin-top: 10vh;
     }
 
@@ -327,6 +337,7 @@ background-color:white;
     #about-link .image #question {
         margin-top:0;
         font-size: 30em;
+        font-weight: 300;
         color:hsl(300, 100%, 50%);
         font-family: 'IBM Plex Sans', sans-serif;
         padding-top: 0;
@@ -338,7 +349,9 @@ background-color:white;
     }
 
     #about-link .description h3 {
-        font-size:6em;
+        font-size: 6.25em;
+        font-weight: 300;
+        letter-spacing: .04em;
         color: #333;
         margin-bottom: .25em;
         margin-top: .5em;
@@ -352,7 +365,7 @@ background-color:white;
     #about-link .description p {
         font-size: 1.25em;
         color: #333;
-        line-height: 1.5;
+        line-height: 2;
         justify-self: flex-end;
         width: 80vh;
         padding-top: 1.25rem;
@@ -367,11 +380,11 @@ background-color:white;
     }
 
     #about-link .page-button {
-        grid-column:2 ;
+        grid-column: 2;
         grid-row:4;
         display:flex;
         align-items: center;
-        padding: 0 0 4rem 2.5rem;
+        justify-content: flex-start;
     }
 
     #about-link .page-button a {
@@ -379,16 +392,15 @@ background-color:white;
         background-color:#fff;
         color: #000;
         padding: .25em 1em;
-        margin-left: .5em;
-        border: 1px solid #000;
+        border: .01em solid #000;
         border-radius: 27px;
-        margin-right: 4%;
         text-align: center;
-        font-size: 2em;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 1.5em;
+        font-family: 'Lato', sans-serif;
         text-transform: uppercase;
         transition: all ease .5s;
-        font-weight: 400;
+        font-weight: 300;
+        margin-left: 15vw;
     }
 
     #about-link .page-button a:hover {
@@ -408,7 +420,7 @@ background-color:white;
     }
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:1023px) {
 
     .page-wrapper {
         grid-template-columns: 100%;
@@ -418,23 +430,24 @@ background-color:white;
     .title {
         grid-column: 1;
         grid-row:1/2;
-       /* background-image: url("../global/img/sample-exp.jpg");  #add an image here !*/
-        background-size: cover;
         display: flex;
         flex-direction: column;
         align-items:center;
         justify-content: flex-start;
         height: 80vh;
-        padding-top: 2.5rem;
+        padding-top: 4.25rem;
     }
 
     .title .short {
         font-family:'IBM Plex Sans', sans-serif;
-        font-size:1em;
-        padding: 1em 1em;
+        font-size: 1.1em;
+        font-weight: 300;
+        padding: 1em 2em;
         color: rgb(62, 190, 147);
         margin-left:.1em;
         text-align: center;
+        letter-spacing: 0.01em;
+        line-height: 5vh;
     }
 
     .title .image {
@@ -446,20 +459,21 @@ background-color:white;
     }
 
     .title .image img {
-        height: 25vh;
+        max-width: 70vw; 
     }
-
     
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
+        font-weight: 300;
         line-height: 60px;
-        letter-spacing: .5px;
+        letter-spacing: .04em;
         margin-left: .1em;
         font-family: 'IBM Plex Sans', sans-serif;
         text-transform: uppercase;
     }
 
     #two {
+        color: hsl(160, 51%, 49%);
         padding-left: 2rem;
     }
 
@@ -471,14 +485,16 @@ background-color:white;
         margin:2rem 1rem;
         margin-top:0;
         border-radius: 25px;
-        box-shadow: 1px 1px 1px 2px hsl(160, 51%, 49%);
+        box-shadow: .01em .01em .01em .04em hsl(160, 51%, 49%);
+        padding:1rem;
     }
 
     #about p {
         font-size:1.125rem;
-        padding:1rem;
-        line-height: 1.25;
+        font-weight: 300;
+        line-height: 2;
         color: #333;
+        text-align: center;
     }
 
     #links {
@@ -518,13 +534,15 @@ background-color:white;
     }
 
     #app-link .description h3 {
-        font-size: 2.65rem;
+        font-size: 2.75rem;
+        font-weight: 200;
         color: #333;
         margin-bottom: 1.5rem;
         font-family: 'IBM Plex Sans', sans-serif;
-        font-weight: 600;
         text-transform: uppercase;
         text-align: center;
+        letter-spacing: .04em;
+        padding-top: 3vh;
     }
 
     #app-link .description h3 span {
@@ -533,9 +551,10 @@ background-color:white;
 
     #app-link .description p {
         font-size: .95rem;
+        font-weight: 300;
         color: #333;
         text-align: center;
-        line-height: 1.5;
+        line-height: 2;
     }
 
     #app-link .page-button{
@@ -548,12 +567,13 @@ background-color:white;
         text-decoration: none;
         background-color: #fff;
         color: #000;
-        border: 1px solid #000;
+        border: .01em solid #000;
         padding: .35em 1em;
         border-radius: 27px;
         text-align: center;
         font-size: 1em;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
         margin: .75em;
         text-transform: uppercase;
         transition: all ease .2s;
@@ -571,7 +591,7 @@ background-color:white;
         box-shadow: 1px 1px 1px 3px hsl(75, 100%, 50%);
         border-radius: 25px;
         margin-top: 10vh;
-        max-height: 95vh;
+        max-height: 105vh;
     }
 
     #lab-link .image {
@@ -588,18 +608,20 @@ background-color:white;
 
     #lab-link .description {
         grid-row: 2;
-        padding:.5em 1em 1em 1em;
+        padding:.5em 2em 3em 2em;
     }
 
 
     #lab-link .description h3 {
-        font-size: 2.65rem;
+        font-size: 2.75rem;
         color: #333;
         margin-bottom: 1.5rem;
         font-family: 'IBM Plex Sans', sans-serif;
-        font-weight: 600;
+        font-weight: 300;
         text-transform: uppercase;
         text-align: center;
+        letter-spacing: .04em;
+        padding-top: 3vh;
     }
 
     #lab-link .description h3 span {
@@ -608,11 +630,11 @@ background-color:white;
 
     #lab-link .description p {
         font-size: .95em;
+        font-weight: 300;
         color: #333;
         text-align: center;
-        line-height: 1.5;
+        line-height: 2;
     }
-
 
     #lab-link .page-button{
         display:flex;
@@ -623,12 +645,13 @@ background-color:white;
         text-decoration: none;
         background-color: #fff;
         color: #000;
-        border: 1px solid #000;
+        border: .01em solid #000;
         padding: .35em 1em;
         border-radius: 27px;
         text-align: center;
         font-size: 1em;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
         margin: .75em;
         text-transform: uppercase;
         transition: all ease .2s;
@@ -647,6 +670,7 @@ background-color:white;
         border-radius: 25px;
         margin-top: 10vh;
         max-height: 90vh;
+        padding-top: 5vh;
     }
 
     #about-link a {
@@ -674,11 +698,11 @@ background-color:white;
 
 
     #about-link .description h3 {
-        font-size: 2.65rem;
+        font-size: 2.75rem;
         color: #333;
         margin-bottom: 1.5rem;
         font-family: 'IBM Plex Sans', sans-serif;
-        font-weight: 600;
+        font-weight: 300;
         text-transform: uppercase;
         text-align: center;
         padding-top: 15vh;
@@ -690,9 +714,10 @@ background-color:white;
 
     #about-link .description p {
         font-size: .95rem;
+        font-weight: 300;
         color: #333;
         text-align: center;
-        line-height: 1.5;
+        line-height: 2;
         margin-top: 2rem;
     }
 
@@ -700,10 +725,10 @@ background-color:white;
         color:hsl(300, 100%, 50%);
     }
 
-
     #about-link .page-button{
         display:flex;
         justify-content: center;
+        align-items: center;
         grid-row: 2;
     }
 
@@ -711,12 +736,13 @@ background-color:white;
         text-decoration: none;
         background-color: #fff;
         color: #000;
-        border: 1px solid #000;
+        border: .01em solid #000;
         padding: .35em 1.5em;
         border-radius: 27px;
         text-align: center;
         font-size: 1em;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
         margin: 1em;
         text-transform: uppercase;
         transition: all ease .2s;
