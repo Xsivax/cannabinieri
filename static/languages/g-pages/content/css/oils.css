@@ -1,0 +1,533 @@
+:root {
+    --gradient: linear-gradient(
+        45deg,
+        hsl(160, 51%, 49%), 
+        hsl(160, 51%, 59%), 
+        hsl(160, 51%, 79%),
+        hsl(160, 51%, 89%),
+        #fff
+    );
+}
+
+.global-wrapper {
+    width: 100%;
+}
+
+.page-wrapper {
+    display:grid;
+    width: 100%;
+}
+
+.info h1 {
+    color:rgb(0, 255, 170);
+    font-family:'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    justify-self: center;
+    align-self: center;
+    padding-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info p {
+    color: black;
+
+}
+
+.info p span {
+    color: rgb(0, 255, 170);
+    font-weight: 600;
+}
+
+.about p span {
+    color: rgb(0, 255, 170);
+    font-weight: 400;
+}
+
+.product p span{
+    color:rgb(62, 190, 147);
+} 
+
+@media (max-width:480px) {
+   .page-wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "info"
+    "page-content";
+    width: 100%;
+   }
+
+   .info {
+    width:100%;
+    height: 75vh;
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+}
+
+.info p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.image {
+    display:flex;
+    justify-content: center;
+}
+
+.info img {
+    width: 20vh;
+    height: auto;
+    align-self: center;
+    margin-top: 5vh;
+}
+
+
+.oil-container {
+    width: 100%;
+    grid-area: page-content;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: rgb(0, 255, 170);
+    display:flex;
+   flex-direction: column;
+}
+
+.strip {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 1rem 1.25rem;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.strip .about {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 6.5vh;
+}
+
+.about h3 {
+    font-size: 1.85rem;
+    font-weight: 300;
+    line-height: 3rem;
+    color: #333;
+    letter-spacing: .01em;
+    padding: 1vh 2vw;
+}
+
+.about h3 span {
+    color: rgb(0, 255, 170);
+}
+
+.about p {
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 4vh;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.about p span {
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: .02em
+}
+
+.about img {
+    width:40vh;
+    height: auto;
+    padding: 1rem 0 2rem 0;
+}
+
+.strip2 {
+    padding:.75rem;
+    background-color: white;
+    border-radius: 25px;
+    z-index: 10000;
+    margin-top: 3vh;
+    min-height: 90vh;
+}
+
+.products h3 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 3rem;
+    color: rgb(62, 190, 147);
+    margin: 1.25rem 0 .75rem 1.5rem;
+    text-transform: uppercase;
+    font-family:'IBM Plex Sans', sans-serif;
+}
+
+.products img {
+    max-height: 30vh;
+    margin: 1.25rem 0 2rem 0;
+}
+
+.products h5 {
+    color: black;
+    text-shadow: .05em .025em hsl(160, 49%, 40%);
+    font-size: 1.85rem;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    padding-top: 1vh;
+}
+
+.products p {
+    font-weight: 300;
+    line-height: 4vh;
+    text-align: center;
+    margin: .75rem;
+    padding-top: 2vh;
+}
+
+.products p span {
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+} 
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px #999;
+    border-radius: 25px;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.product .click {
+    padding-top: 1vh;
+}
+
+.product .click button {
+    padding: .5rem 1.25rem;
+    background-image: var(--gradient);
+    background-size: 300%;
+    border: none;
+    font-size: 1.25rem;
+    font-family:'Lato', sans-serif;
+    line-height: 1rem;
+    border-radius: 25px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 1rem;
+    margin-left: .25rem;
+}
+
+.product .click button a {
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+.product .click button a:active {
+    -webkit-text-stroke-width: .05em;
+        -webkit-text-stroke-color: hsl(300, 100%, 95% );
+        filter: blur(.015em) 
+}
+
+#shop {
+    margin-left: 5vh;
+    text-decoration: none;
+    color: white;
+}
+
+
+#shop a:active {
+    opacity: 50%;
+}
+
+
+
+#desktop {
+    display:none;
+}
+}
+
+@media (min-width:768px){
+  
+    .page-wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "info"
+        "page-content";
+        width: 100%;
+    }
+
+    .info {
+        width:100%;
+        height: 65vh;
+        grid-area: info;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+        padding-left: 2vw;
+    }
+
+    .info h1 {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 7rem;
+        font-weight: 300;
+        margin-bottom: 0;
+        display: flex;
+        justify-self: center; 
+        padding-top: 5vh;
+    }
+
+    .info p {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: flex-start;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 5rem;
+        letter-spacing: .05em;
+    }
+
+    .info p span {
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+
+    .info .image {
+        grid-column: 2;
+        grid-row: 1/3;
+        display:flex;
+        justify-self: flex-start;
+        align-self: center;
+        padding-left: 5vw;
+    }
+
+    .info img {
+       max-height: 45vh;
+    }
+
+
+    .oil-container {
+        width: 100%;
+        grid-area: page-content;
+        padding:2rem;
+        overflow: hidden;
+        background-color: rgb(0, 255, 170);
+        display:flex;
+        flex-direction: column;
+    }
+
+    .strip {
+        padding: 2.5rem 2.5rem 2.5rem 3rem;
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        min-height: 90vh;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .2fr 1fr;
+    }
+
+    .about h3 {
+        grid-column: 1/3;
+        grid-row: 1;
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 4rem;
+        letter-spacing: .05em;
+        color: #333 ;
+        margin: 5rem 0 2rem  0;
+    }
+
+    .about span {
+        color: rgb(0, 255, 170);
+    }
+    
+    .about p {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        line-height: 5vh;
+        margin: 1rem 0 0 0;
+        float: left;
+        text-align: center;
+        font-size: 1.55rem;
+    }
+
+    .about p span {
+        color: rgb(0, 255, 170);
+        font-weight: 400;
+        padding-top: 4vh;
+        letter-spacing: .03em;
+        font-size: 1.6rem
+    }
+
+    .about .image {
+        grid-column: 2;
+        grid-row:1/3;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10vh;
+    }
+
+    
+    .about img {
+        max-width: 35vw;
+        height: auto;
+    }
+
+    .strip2 {
+        padding:.75rem;
+        background-color: white;
+        border-radius: 25px;
+        z-index: 10000;
+        margin-top: 3vh;
+        min-height: 90vh;
+    }
+    
+    .products h3 {
+        font-size: 2.75rem;
+        font-weight: 300;
+        line-height: 3rem;
+        color: rgb(62, 190, 147);
+        margin: 2.5rem 0 3rem 1.5rem;
+        text-transform: uppercase;
+        font-family:'IBM Plex Sans', sans-serif;
+    }
+    
+    .products img {
+        max-width: 45vh;
+    }
+    
+    .product h5 {
+    color: black;
+    text-shadow: .05em .025em hsl(160, 49%, 40%);
+    font-size: 1.65rem;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    }
+    
+    .products p {
+        text-align: center;
+    }
+    
+    .product {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: .25fr .5fr .25fr;
+        box-shadow: 3px 3px 3px 3px #eee;
+        border-radius: 25px;
+        margin: 1rem;
+        min-height: 70vh;
+        padding-left: 5vw;
+    }
+
+    .product .image {
+        grid-column: 1;
+        grid-row:1/4;
+        display: flex;
+        align-items: center;
+        border-right: .1em solid #eee;
+    }
+
+    .product h5 {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 3rem;
+        display:flex;
+        justify-self: center;
+        align-self: flex-end;
+    }
+
+    .product p {
+        display:flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        grid-column: 2;
+        grid-row: 2;
+        padding: 0 2.5rem;
+        font-size: 1.15rem;
+        line-height: 5vh;
+        margin-top: .5vh;
+    }
+
+    .product p span {
+        font-weight: 400;
+        letter-spacing: .03em;
+        padding-top: 2vh;
+    }
+
+    .product .click {
+        grid-column: 2;
+        grid-row: 3;
+        display:flex;
+        justify-self: center;
+        align-self: center;
+        justify-content: space-between;
+        padding: 0 0 2.5rem 0;
+    }
+    
+    .product .click button  {
+        padding: .75rem 1.5rem;
+        background-image: var(--gradient);
+        background-size: 300%;
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+        font-family:'Lato', sans-serif;
+        line-height: 1rem;
+        border-radius: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .3s;
+        margin-top: 1rem;
+        margin-left: .25rem;
+    }
+
+    .product .click button a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .product .click button a:active,
+    .product .click button a:focus, 
+    .product .click button a:hover {
+        -webkit-text-stroke-width: .05em;
+        -webkit-text-stroke-color: hsl(300, 100%, 90% );
+        filter: blur(.015em) 
+    }
+    
+    #shop {
+        margin-left: 10vh;
+    }
+    
+}
