@@ -319,7 +319,7 @@ background-color:white;
         display:grid;
         grid-template-columns: 35% 75%;
         grid-template-rows: 20% 40% 20% ;
-        box-shadow: 1px 1px 1px 3px hsl(300, 100%, 50%);
+        box-shadow: 1px 1px 1px 3px hsl(160, 51%, 50%);
         border-radius: 25px;
         min-height: 70vh;
         padding: 2rem 0 2rem 0;
@@ -338,7 +338,7 @@ background-color:white;
         margin-top:0;
         font-size: 30em;
         font-weight: 300;
-        color:hsl(300, 100%, 50%);
+        color:hsl(160, 49%, 50%);
         font-family: 'IBM Plex Sans', sans-serif;
         padding-top: 0;
     }
@@ -359,7 +359,7 @@ background-color:white;
     }
 
     #about-link h3 span {
-        color:hsl(300, 100%, 50%);
+        color:hsl(160, 49%, 50%);
     }
 
     #about-link .description p {
@@ -372,7 +372,7 @@ background-color:white;
     }
 
     #about-link .description p span {
-        color:hsl(300, 100%, 50%);
+        color:hsl(160, 49%, 50%);
     }
 
     #about-link a {
@@ -404,7 +404,7 @@ background-color:white;
     }
 
     #about-link .page-button a:hover {
-        background-color: hsl(300, 100%, 75%);
+        background-color: hsl(160, 49%, 75%);
     }
 
     #footer-wrapper {
@@ -666,7 +666,7 @@ background-color:white;
         grid-template-rows: repeat(2, .7fr);
         grid-template-columns: 100%;
         padding-bottom: 1.5rem;
-        box-shadow: 1px 1px 1px 3px hsl(300, 100%, 50%);
+        box-shadow: 1px 1px 1px 3px hsl(160, 49%, 50%);
         border-radius: 25px;
         margin-top: 10vh;
         max-height: 90vh;
@@ -685,7 +685,7 @@ background-color:white;
     #about-link .image #question {
         margin-top:.35em;
         font-size: 30vh;
-        color: hsl(300, 100%, 50%);
+        color: hsl(160, 49%, 50%);
         font-family: 'IBM Plex Sans', sans-serif;
         padding-left: 2vh;
     }
@@ -709,7 +709,7 @@ background-color:white;
     }
 
     #about-link .description h3 span {
-        color: hsl(300, 100%, 50%);
+        color: hsl(160, 49%, 50%);
     }
 
     #about-link .description p {
@@ -722,7 +722,7 @@ background-color:white;
     }
 
     #about-link .description p span {
-        color:hsl(300, 100%, 50%);
+        color:hsl(160, 49%, 50%);
     }
 
     #about-link .page-button{
@@ -749,7 +749,7 @@ background-color:white;
     }
 
     #about-link .page-button a:active {
-        border-color:hsl(300, 100%, 75%);
+        border-color:hsl(160, 49%, 75%);
     }
 
     #footer-wrapper {

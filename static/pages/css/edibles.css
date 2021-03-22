@@ -282,6 +282,7 @@ color: hsl(75, 100%, 40%);
         grid-column: 1;
         grid-row: 1;
         font-size: 6rem;
+        font-weight: 300;
         margin-bottom: 0;
         display: flex;
         justify-self: center;

@@ -349,11 +349,11 @@ h1 {
         font-family: 'IBM Plex Sans', sans-serif;
     }
 
-    .fa {
+    .fa-check {
         color: hsl(300, 100%, 50%);
         -webkit-text-stroke: .1em white;
     }
-
+    }
     #you-link .description p {
         font-size: 1.25em;
         color: #333;

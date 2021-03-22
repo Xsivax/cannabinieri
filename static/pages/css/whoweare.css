@@ -97,22 +97,27 @@
 
    .info {
     width:100%;
-    height: 77.5vh;
+    height: 75vh;
     grid-area: info;
     display: flex;
     flex-direction: column;
-    margin: 0 1vh;
+    padding-top: 10vh;
 }
 
 .info p {
-    font-size: .95rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2rem;
     margin: 1rem;
     text-align: center;
 }
 
 .info h1 {
-    font-size: 2.5rem;
-    padding-top: 3rem;
+    font-size: 2.75rem;
+    font-weight: 300;
+    line-height: 4rem;
+    padding: 0;
+    margin-bottom: 1rem;
 }
 
 .info h1 span {
@@ -125,10 +130,9 @@
 }
 
 .info img {
-    width: 40vh;
+    min-width: 80vw ;
     height: auto;
     align-self: center;
-    margin-top: 2vh;
 }
 
 
@@ -162,21 +166,27 @@
 
 .philo h3 {
     font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .05em;
+    text-align: center;
     line-height: 3rem;
     color: #333;
-    margin: 1rem 0;
+    margin: 2rem 0 1rem 0;
 }
 
 .philo h3 span {
-    color: rgb(0, 255, 170);
+    color: hsl(160, 90%, 50%);
 }
 
 .philo p {
-    margin: 1rem 0;
+    line-height: 3.5vh;
+    font-weight: 300;
+    letter-spacing: .02em;
+    margin: 1.75rem .75rem 1rem .75rem;
 }
 
 .philo img {
-    width:40vh;
+    max-width:70vw;
     height: auto;
     padding: 1rem 0 2rem 0;
 }
@@ -192,9 +202,11 @@
 
 .products h3 {
     font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: .05em;
     line-height: 3rem;
     color: rgb(62, 190, 147);
-    margin: 1rem 0 0 1.5rem;
+    margin: 1rem 0 1rem 1.5rem;
     text-transform: uppercase;
     font-family:'IBM Plex Sans', sans-serif;
 }
@@ -209,6 +221,8 @@
     text-shadow: 1.5px 3px rgb(62, 190, 147);
     font-size: 1.5rem;
     font-family:'IBM Plex Sans', sans-serif;
+    font-weight: 100;
+    letter-spacing: .04em;
     text-transform: uppercase;
     margin-bottom: .5rem;
 }
@@ -255,7 +269,7 @@
 }
 
 #gram {
-    width: 10vh;
+    min-width: 15vw;
 }
 
 .social .instagram #account {
@@ -272,7 +286,7 @@
 }
 
 #tube {
-    width: 10vh;
+    min-width: 10vw;
 }
 
 
@@ -285,15 +299,14 @@
 
 .social button {
     padding: .5rem 1.25rem;
-    background-color: black;
-    border: none;
+    background-color: #fff;
+    border: .01em solid #000;
     font-size: 1.25rem;
-    font-family:'Fira Sans', sans-serif;
+    font-family:'Lato', sans-serif;
     line-height: 1rem;
     border-radius: 25px;
-    font-weight: 600;
+    font-weight: 300;
     cursor: pointer;
-    transition: .3s;
     margin-top: 1rem;
     margin-left: .25rem;
     transition: .5s;
@@ -301,12 +314,12 @@
 
 .social button a {
     text-decoration: none;
-    color: white;
+    color: #000;
 }
 
-.social button a:active {
+.social button:active {
 opacity: 50%;
-color: rgb(0, 255, 170);
+background-color: hsl(160, 100%, 80%);
 }
 
 
@@ -345,21 +358,31 @@ color: rgb(0, 255, 170);
         grid-column: 1;
         grid-row: 1;
         font-size: 6rem;
+        font-weight: 200;
+        letter-spacing: .04em;
         margin-bottom: 0;
         display: flex;
-        justify-self: flex-start;
-        margin-left: 10rem;
+        justify-content: center;
+        align-self: flex-end;
+        padding-bottom: 1rem;
         
+    }
+
+    .info h1 span {
+        margin: 0 .095em;
     }
 
     .info p {
         grid-column: 1;
         grid-row: 2;
-        font-size: 1.5rem;
-        margin: 0 1rem 1rem 12rem;
+        display: flex;
+        justify-content: center;
+        font-size: 1.75rem;
+        font-weight: 300;
         text-align: left;
         line-height: 2.25rem;
-        letter-spacing: .5px;
+        letter-spacing: .03em;
+        padding-top: 5vh;
     }
 
     .info img {
@@ -397,23 +420,32 @@ color: rgb(0, 255, 170);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: .2fr 1fr;
+        padding: 0 0 5vh 0;
     }
 
     .philo h3 {
+        display: flex;
+        align-items: center;
         font-size: 2.5rem;
+        font-weight: 300;
         line-height: 3rem;
-        color: #333 ;
-        margin: 5rem 0 2rem 1rem;
+        color: #333;
+        letter-spacing: 0.4rem;
+        margin: 5rem 0 2rem 0;
+        padding-left: 2vw;
     }
 
     .philo span {
-        color: rgb(0, 255, 170);
+        color: hsl(160, 90%, 50%);
     }
     
     .philo p {
-        margin: 1rem 0 0 1rem;
-        float: left;
+        display: flex;
+        margin: 1rem 0 0 0;
         font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 5vh;
+        text-align: center;
     }
 
     .philo .image {
@@ -426,9 +458,9 @@ color: rgb(0, 255, 170);
 
     
     .philo img {
-        width:60vh;
+        max-width: 35vw;
         height: auto;
-        margin-top: 10vh;
+        margin-top: 15vh;
     }
 
    #partners {
@@ -440,16 +472,25 @@ color: rgb(0, 255, 170);
    }
 
     .strip2 {
-        padding:.75rem .75rem 5rem .75rem;
+        padding:.75rem .75rem 5rem 2.5rem;
         background-color: white;
         border-radius: 25px;
         z-index: 10000;
         margin-top: 3vh;
         min-height: 90vh;
     }
+
+    #heading2 {
+        color: #333;
+        grid-row: 1;
+        grid-column: 1/3;
+        padding-left: 2vw;
+    }
     
     .products h3 {
         font-size: 2.5rem;
+        font-weight: 200;
+        letter-spacing: .05em;
         line-height: 3rem;
         color: rgb(62, 190, 147);
         margin: 2.5rem 0 3rem 1.5rem;
@@ -484,6 +525,8 @@ color: rgb(0, 255, 170);
         grid-row: 1;
         justify-self: center;
         font-size: 5vh;
+        font-weight: 300;
+        letter-spacing: .04em;
         font-family:'IBM Plex Sans', sans-serif;
         text-transform: uppercase;
 
@@ -499,9 +542,10 @@ color: rgb(0, 255, 170);
     
     .social .blog #blog {
         margin: 0;
-        width: 20vh;
-        height: 5vh;
+        width: 13.5vw;
+        height: 5.5vh;
         font-size: 1.75rem;
+        font-weight: 300;
     }
     
     .social .instagram {
@@ -512,8 +556,8 @@ color: rgb(0, 255, 170);
     }
     
     #gram {
-        width: 10vh;
-        margin-right: 5vh;
+        min-width: 6.5vw;
+        margin-right: 5vw;
     }
     
     .social .instagram #account {
@@ -530,8 +574,8 @@ color: rgb(0, 255, 170);
     }
     
     #tube {
-        width: 10vh;
-        margin-right: 5vh;
+        min-width: 5.5vw;
+        margin-right: 5vw;
     }
     
     
@@ -544,29 +588,25 @@ color: rgb(0, 255, 170);
     
     .social button {
         padding: .5rem 1.25rem;
-        background-color: black;
-        border: none;
+        background-color: #fff;
+        border: .01em solid #000;
         font-size: 1.25rem;
-        font-family:'Fira Sans', sans-serif;
+        font-family:'Lato', sans-serif;
         line-height: 1rem;
         border-radius: 25px;
-        font-weight: 600;
+        font-weight: 300;
         cursor: pointer;
-        transition: .3s;
         margin-top: 1rem;
-        margin-left: .25rem;
         transition: .5s;
     }
     
     .social button a {
         text-decoration: none;
-        color: white;
+        color: #000;
     }
     
-    .social button a:active {
+    .social button:hover {
     opacity: 50%;
-    color: rgb(0, 255, 170);
+    background-color: hsl(160, 100%, 80%);
     }
-    
-    
 }

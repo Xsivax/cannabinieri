@@ -282,6 +282,8 @@ color: hsl(75, 100%, 40%);
         grid-column: 1;
         grid-row: 1;
         font-size: 6rem;
+        font-weight: 300;
+        letter-spacing: .04em;
         margin-bottom: 0;
         display: flex;
         justify-self: center;
@@ -349,9 +351,10 @@ color: hsl(75, 100%, 40%);
 
     .about h3 {
         font-size: 2.5rem;
-        font-weight: 400;
-        line-height: 3rem;
-        color:rgb(191, 255, 0);
+        font-weight: 300;
+        letter-spacing: .05em;
+        line-height: 4rem;
+        color: hsl(75, 90%, 50%);
         margin: 5rem 0 2rem 1rem;
     }
 
