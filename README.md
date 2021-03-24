@@ -1,14 +1,28 @@
 
-The Website for the company Cannabinieri
+The Website for Cannabinieri CBD
+
+How to start: 
+
+-download respository as zip
+
+-unzip directory
+
+- change into directory
+
+- inside directory run:
+
+ node server.js
+ 
+ -if there are problems try 
+ 
+ npm install
 
 
-started with : node server.js
 
 The content both text and images are dummy content they need to be replaced with the 'real' content.
 
-The Language Links are not functional yet.
+The Language Links are not functional yet (exept 'Deutsch').
 
-The Website is not yet fully responsive, media queries have to be fitted to serve all device-sizes.
+Some links lead nowhere, content has to be added. 
 
-The links in the footer lead nowhere content has to be added. 
 A (alt) social media accounts have to be built, hosted and added.
