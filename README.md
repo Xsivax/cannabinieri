@@ -3,7 +3,7 @@ The Website for Cannabinieri CBD
 
 How to start: 
 
-- download respository as zip
+- download respository as zip (Green 'Code' Button )
 
 - unzip directory
 
