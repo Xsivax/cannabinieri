@@ -3,9 +3,9 @@ The Website for Cannabinieri CBD
 
 How to start: 
 
--download respository as zip
+- download respository as zip
 
--unzip directory
+- unzip directory
 
 - change into directory
 
@@ -13,7 +13,7 @@ How to start:
 
  node server.js
  
- -if there are problems try 
+ - if there are problems try 
  
  npm install
 
